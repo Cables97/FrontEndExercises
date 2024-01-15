@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+
+.banner{
+    width: 1440px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.info-container{
+    width:60%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+}
+
+.logo{
+    margin-left: 20%;
+    margin-top:5%;
+}
+
+
+.text-box{  
+    width:60%;
+    margin:15% auto;
+    position: relative;
+}
+
+.title{
+    color:#453C3D;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-bottom: 10%;
+}
+.line1{
+    font-weight: 200;
+}
+
+.text, .line1{
+    color:#CEA1A2;
+}
+
+
+.text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 10%;
+    line-height: 150%;
+}
+
+
+.email{
+    width:100%;
+    height: 4em;
+    border:1px solid rgba(144, 144, 144, .5);   
+    border-radius: 2em;
+    padding-left:5%;
+    background: none;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#CEA1A2;
+}
+
+.email:focus{
+    outline:none;
+}
+
+.email:invalid{
+    border: 1px solid #F96364;
+}
+
+.email:invalid  ~ .error{
+    display:inherit;
+}
+.email:invalid  ~ .error-text{
+    display:inherit;
+}
+
+.mobile-photo{
+    display: none;
+}
+
+.email-button{
+    position: absolute;
+    right:0;
+    border:none;
+    border-radius: 2em;
+    height: 4em;
+    width:20%;
+    background-color:#F2A1A3;
+    z-index: 2;
+    box-shadow: -2px 5px 10px 2px rgba(144, 144, 144, .5);
+}
+.email-button:hover{
+    background-color:#FAD6D6;
+    box-shadow: -2px 5px 10px 2px rgba(144, 144, 144, .5), 0 0 1px 1px rgba(224, 80, 80, 0.25) inset;
+
+}
+
+.error{
+    display: none;
+    position: absolute;
+    bottom: 1em;
+    right: 120px;
+}
+.error-text{
+    position: absolute;
+    display: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .8em;
+    margin-left: 10%;
+    color:#F96364;
+}
+
+
+/* Mobile ( 992px wide & under) */
+@media only screen and (max-width: 992px) {
+    .banner{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .info-container{  
+        width:100%;
+    }
+    
+    .logo{
+        width: 33%;
+        height: auto;
+        margin-left: 5%;
+        margin-top:10%;
+        margin-bottom:10%;
+    }
+
+    .lgo{
+        max-width:100%;
+    }
+
+    .title{
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 5%;
+    }
+    
+    
+    .text-box{  
+        width:100%;
+        margin:15% auto;
+        position: relative;
+    }
+    .text{
+        width:80%;
+        margin:auto;
+        font-size: .8em;
+        margin-bottom: 10%;
+        text-align: center;
+        
+    }
+    .email{
+        width:80%;
+        margin-left:10%;
+        height: 4em;
+    }
+    
+
+    .mobile-photo{
+        display: none;
+        max-width: 100%;
+        height:100%;
+    }
+    .mbl-phto{
+        width:100%;
+    }
+
+
+    
+    .email-button{
+        left:70%;
+
+    }
+    
+    .error{
+        bottom: 1em;
+        right: 80px;
+    }
+    .error-text{
+        position: absolute;
+        display: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: .8em;
+        margin-left: 10%;
+    }
+
+
+
+
+    .mobile-photo{
+        display:inherit;
+        margin: 0 auto;
+    }
+    .photo-container{
+        display:none;
+    }
+
+} 
