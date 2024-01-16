@@ -98,11 +98,11 @@ body{
     width:20%;
     background-color:#F2A1A3;
     z-index: 2;
-    box-shadow: -2px 5px 10px 2px rgba(144, 144, 144, .5);
+    box-shadow: -1px 1px 5px 2px rgba(144, 144, 144, .25);
 }
 .email-button:hover{
     background-color:#FAD6D6;
-    box-shadow: -2px 5px 10px 2px rgba(144, 144, 144, .5), 0 0 1px 1px rgba(224, 80, 80, 0.25) inset;
+    box-shadow: -1px 1px 5px 2px rgba(144, 144, 144, .25), 0 0 1px 1px rgba(224, 80, 80, 0.25) inset;
 
 }
 
@@ -121,6 +121,13 @@ body{
     color:#F96364;
 }
 
+
+.info{
+    width: 600px;
+    margin:auto;
+    line-height: 150%;
+
+}
 
 /* Mobile ( 992px wide & under) */
 @media only screen and (max-width: 992px) {
