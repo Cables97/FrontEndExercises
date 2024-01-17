@@ -7,38 +7,90 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
+  <div class="calculator">
 
-  Bill
+    <div class="input container">
+      
+      <h1 class="title">Bill</h1>
+      <div class="input-box pad">
+        <input id="bill" type="text" inputmode="numeric" class="input-field" placeholder="0" autocomplete="off"></input>
+        <img src="./images/icon-dollar.svg" alt="" class="icon">
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
 
-  Number of People
+      <h1 class="title">Select Tip %</h1>
+      <div class="button-box pad">
+        <button id="5" class="button tip">5%</button> 
+        <button id="10" class="button tip">10%</button> 
+        <button id="15" class="button tip">15%</button> 
+        <button id="25" class="button tip">25%</button> 
+        <button id="50" class="button tip">50%</button> 
+        <input id="custom-tip" type="text" inputmode="numeric"class="custom tip button" placeholder="Custom" autocomplete="off"></input>
+      </div>
 
-  Tip Amount
-  / person
+      
 
-  Total
-  / person
+      <h1 class="title">Number of People</h1>
+      <div class="input-box ">
+        <input id="num-ppl" type="number" inputmode="numeric"class="input-field " placeholder="0" autocomplete="off"></input>
+        <img src="./images/icon-person.svg" alt="" class="icon">
+        <div id="not-zero" class="error-message active">Can't be zero</div>
+        <div id='nan' class="error-message nan">Must be a number</div>
+      </div>
+      
 
-  Reset
+    </div>
+
+
+    <div class="output-outer container">
+      <div class="output-inner">
+        <div class="row">
+          <div class="label">
+            <h1 class="title">Tip Amount</h1>
+            <p class="subtitle">/ person</p>          
+          </div>
+            <div id="tip-output" class="output">$0.00</div>
+        </div>
+
+        <div class="row">
+          <div class="label">
+            <h1 class="title">Total</h1>
+            <p class="subtitle">/ person</p>          
+          </div>
+            <div id="total-output" class="output">$0.00</div>
+        </div>
+
+        <div class="reset">
+          <button id="reset-button" class="button reset-button">RESET</button> 
+        </div>
+
+
+
+      </div>
+    </div>
+
+      
+
+  </div>
+
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://cables97.github.io/">Caleb -Cables- Universe Jan 2024</a>.
   </div>
+
+  <script type="module" src="./app.js"></script>
+
+
+
 </body>
 </html>

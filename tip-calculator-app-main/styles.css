@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  width: 60%;
+  height: auto;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+
+.output-outer {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+}
+
+.container {
+  width: 45%;
+  flex-grow: 1;
+  margin: 30px;
+}
+
+.title {
+  font-size: 1em;
+  font-family: "Space Mono", monospace;
+  font-weight: 300;
+  color: hsl(184, 14%, 56%);
+}
+
+.pad {
+  padding-bottom: 30px;
+}
+
+.button {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  height: 60px;
+}
+
+.button-box {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.button-box .tip {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  margin: 5px;
+  width: 120px;
+  flex-grow: 1;
+}
+.button-box .active {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  border: 2px solid hsl(183, 100%, 15%);
+}
+.button-box .custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  text-align: end;
+  padding-right: 5px;
+}
+.button-box .custom::-moz-placeholder {
+  padding-left: 5px;
+  text-align: center;
+}
+.button-box .custom::placeholder {
+  padding-left: 5px;
+  text-align: center;
+}
+
+.input-box {
+  width: 100%;
+}
+.input-box .input-field {
+  line-height: 175%;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  text-align: end;
+  padding-right: 20px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.input-box .input-field:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.input-box .error {
+  border: 2px solid red;
+}
+.input-box .icon {
+  position: relative;
+  bottom: 2em;
+  left: 20px;
+}
+.input-box .error-message {
+  display: none;
+  position: relative;
+  bottom: 90px;
+  right: -200px;
+  color: red;
+  font-family: "Space Mono", monospace;
+  font-size: 0.8em;
+}
+
+.input-field:invalid ~ .nan {
+  display: inherit;
+}
+
+.output-inner {
+  margin: 30px;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+.output-inner .row {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.output-inner .row .label {
+  color: hsl(0, 0%, 100%);
+}
+.output-inner .row .label .title {
+  font-size: 1em;
+  font-family: "Space Mono", monospace;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+}
+.output-inner .row .label .subtitle {
+  font-size: 0.8em;
+  font-family: "Space Mono", monospace;
+  font-weight: 300;
+  color: hsl(184, 14%, 56%);
+  line-height: 0;
+}
+.output-inner .row .output {
+  color: hsl(172, 67%, 45%);
+  font-family: "Space Mono", monospace;
+  font-size: 3em;
+  text-align: end;
+}
+.output-inner .reset {
+  margin-top: auto;
+  width: 100%;
+}
+.output-inner .reset .reset-button {
+  background-color: hsl(172, 67%, 45%);
+  width: 100%;
+}
+.output-inner .reset .reset-button:hover {
+  background-color: white;
+}
+
+.button:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+.custom:hover, .custom:focus {
+  border: 2px solid hsl(184, 14%, 56%);
+  background-color: hsl(189, 41%, 97%);
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+
+/* Mobile ( 992px wide & under) */
+@media only screen and (max-width: 900px) {
+  .calculator {
+    min-width: 375px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+    flex-grow: 1;
+    margin: 15px;
+  }
+  .output-inner .row .output {
+    font-size: 2em;
+  }
+  .reset-button {
+    margin-top: 40px;
+  }
+}
+/* Mobile ( 992px wide & under) */
+@media only screen and (max-width: 1400px) {
+  .calculator {
+    width: 75%;
+  }
+  .container {
+    width: 90%;
+    flex-grow: 1;
+    margin: 15px;
+  }
+  .output-inner .row .output {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=styles.css.map */
