@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard {
+  border: 1px solid black;
+  width: 1200px;
+  height: 600px;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile {
+  position: relative;
+  width: 25%;
+  padding: 10px;
+}
+.profile .top {
+  position: absolute;
+  background-color: hsl(246, 80%, 60%);
+  width: calc(100% - 20px);
+  height: 65%;
+  z-index: 2;
+  border-radius: 20px;
+  transition: 0.5s;
+  padding: 20px;
+}
+.profile .top .bio {
+  height: 100%;
+  width: 100%;
+}
+.profile .top .bio .bio-img {
+  width: 40%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.profile .top .bio .intro {
+  margin-top: 20%;
+  margin-bottom: 0;
+  color: hsl(236, 100%, 87%);
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+.profile .top .bio .name {
+  margin-top: 0;
+  color: white;
+  font-size: 52px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+.profile .top:hover {
+  height: 70%;
+}
+.profile .bot {
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(50% - 20px);
+  bottom: 10px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
+.profile .bot .selectors {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+}
+.profile .bot .selectors .selector {
+  font-weight: 400;
+}
+.profile .bot .selectors .selector:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.info-container {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info-box {
+  position: relative;
+  height: 50%;
+  width: 33.3%;
+  padding: 10px;
+}
+.info-box .background {
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(90% - 20px);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.info-box .background .bg-img {
+  position: absolute;
+  -webkit-mask-clip: padding-box;
+          mask-clip: padding-box;
+  right: 20px;
+  top: -10px;
+}
+.info-box .info {
+  position: absolute;
+  bottom: 10px;
+  background-color: hsl(235, 46%, 20%);
+  width: calc(100% - 20px);
+  height: calc(85% - 20px);
+  z-index: 2;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.info-box .info .text-box {
+  position: relative;
+  height: 80%;
+  width: 80%;
+  margin: 10% auto;
+  font-family: "Rubik", sans-serif;
+}
+.info-box .info .text-box .title {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  line-height: 0;
+}
+.info-box .info .text-box .hours {
+  position: absolute;
+  top: 50px;
+  color: white;
+  font-size: 62px;
+  font-weight: 300;
+  line-height: 0;
+}
+.info-box .info .text-box .subtitle {
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+  font-weight: 400;
+  line-height: 0;
+}
+.info-box .info .text-box .ellipsis {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: brightness(80%);
+  z-index: 9;
+}
+.info-box .info .text-box .ellipsis:hover {
+  cursor: pointer;
+  filter: brightness(200%);
+}
+.info-box .info:hover {
+  background-color: #34397b;
+  cursor: pointer;
+  height: calc(80% - 15px);
+}
+
+.orange {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.blue {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.red {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.green {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.purple {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.yellow {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.attribution {
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

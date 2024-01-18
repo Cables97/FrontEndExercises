@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+
+  <div class="dashboard">
+      <div class="profile">
+        <div class="top">
+          <div class="bio">
+            <img class="bio-img" src="./images/image-jeremy.png" alt="">
+            <h3 class="intro">Report for</h3>
+            <h1 class="name">Jeremy<br>Robson</h1>
+
+          </div>
+
+        </div>
+
+        <div class="bot">
+          <div class="selectors">
+            <h3 id="daily" class="selector">Daily</h3>
+            <h3 id="weekly" class="selector">Weekly</h3>
+            <h3 id="monthly" class="selector">Monthly</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="info-container">
+        <!--Work-->
+        <div class="info-box">
+
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Work</h2>
+              <h1 id="work-hours" class="hours">32hrs</h2>
+              <h3 id="work-subtitle" class="subtitle">Last Week - 36hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background orange">
+            <img class="bg-img" src="./images/icon-work.svg" alt="">
+          </div>
+
+        </div>
+
+        <!--Play-->
+        <div class="info-box">
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Play</h2>
+              <h1 id="play-hours" class="hours">10hrs</h2>
+              <h3 id="play-subtitle" class="subtitle">Last Week - 8hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background blue">
+            <img class="bg-img" src="./images/icon-play.svg" alt="">
+          </div>
+        </div>
+
+        <!--Study-->
+        <div class="info-box">
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Study</h2>
+              <h1 id="study-hours" class="hours">4hrs</h2>
+              <h3 id="study-subtitle" class="subtitle">Last Week - 7hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background red">
+            <img class="bg-img" src="./images/icon-study.svg" alt="">
+          </div>
+        </div>
+
+        <!--Exercise-->
+        <div class="info-box">
+
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Exercise</h2>
+              <h1 id="exercise-hours" class="hours">4hrs</h2>
+              <h3 id="exercise-subtitle" class="subtitle">Last Week - 5hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background green">
+            <img class="bg-img" src="./images/icon-exercise.svg" alt="">
+          </div>
+
+        </div>
+
+        <!--Social-->
+        <div class="info-box">
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Social</h2>
+              <h1 id="social-hours" class="hours">5hrs</h2>
+              <h3 id="social-subtitle" class="subtitle">Last Week - 10hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background purple">
+            <img class="bg-img" src="./images/icon-social.svg" alt="">
+          </div>
+        </div>
+
+        <!--Self care-->
+        <div class="info-box">
+          <div class="info">
+            <div class="text-box">
+              <h2 class="title">Self Care</h2>
+              <h1 id="self-hours" class="hours">2hrs</h2>
+              <h3 id="self-subtitle" class="subtitle">Last Week - 2hrs</h3>
+              <div class="ellipsis">
+                <img src="./images/icon-ellipsis.svg" alt="" class="">
+              </div>
+            </div>
+          </div>
+
+          <div class="background yellow">
+            <img class="bg-img" src="./images/icon-self-care.svg" alt="">
+          </div>
+
+        </div>
+
+      </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://cables97.github.io/">Caleb -Cables- Universe</a>.
+  </div>
+</body>
+</html>
