@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "title": "Work",
     "timeframes": {
@@ -85,7 +85,7 @@
     }
   },
   {
-    "title": "Self Care",
+    "title": "Self",
     "timeframes": {
       "daily": {
         "current": 0,

@@ -6,6 +6,15 @@ A collection of FrontEnd examples and exercises.
 These small projects are a showcase of ability using real world examples.
 
 
+## [Time-Tracker Dashboard](https://cables97.github.io/FrontEndExercises/time-tracking-dashboard-main/index.html)
+
+![App Screenshot](https://cables97.github.io/FrontEndExercises/time-tracking-dashboard-main/images/screenshot.jpg)
+Dashboard for time-tracking app with RWD
+
+Built using JavaScript, HTML, and SCSS
+
+
+
 ## [Tip Calculator](https://cables97.github.io/FrontEndExercises/tip-calculator-app-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/tip-calculator-app-main/images/screenshot.jpg)
