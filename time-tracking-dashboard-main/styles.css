@@ -236,7 +236,7 @@ body {
   .profile .top .bio .bio-img {
     width: 64px;
     height: 64px;
-    margin-top: calc(32.5% - 64px);
+    margin-top: 26px;
     margin-right: 12px;
   }
   .profile .top .bio .intro {
