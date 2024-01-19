@@ -66,7 +66,14 @@ function topicSet()
         let domSubtitle = document.getElementById(subID);
 
         domHours.innerHTML = hours +'hrs';
-        domSubtitle.innerHTML = 'Last Week - '+ pastHours + 'hrs';
+
+        if(selector == 'monthly'){
+            domSubtitle.innerHTML = 'Last Month - '+ pastHours + 'hrs';
+        }else if(selector == 'weekly'){
+            domSubtitle.innerHTML = 'Last Week - '+ pastHours + 'hrs';
+
+        }else if(selector == 'daily')
+        domSubtitle.innerHTML = 'Yesterday - '+ pastHours + 'hrs';
     }
     
     return null;
