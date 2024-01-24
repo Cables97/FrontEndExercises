@@ -100,7 +100,7 @@ function calculate(){
     bill = document.getElementById('bill').value;
     numOfPeople = domNumOfPeople.value;
 
-    console.log(numOfPeople);
+   //console.log(numOfPeople);
     if(numOfPeople <= 0 ){
         document.getElementById('not-zero').classList.add('not-zero');
         
@@ -116,9 +116,11 @@ function tipPerPerson(bill, numOfPeople, tip){
     let tipOut = ((bill * tip) / numOfPeople);
     let tipRounded = Math.round(tipOut * 100) / 100
     
-    if(isNaN(tipRounded)){
+    if(!isFinite(tipRounded)){
         domTipOutput.innerHTML ='$0.00';
-    }else{
+    }
+    
+    else{
         domTipOutput.innerHTML ='$' + (Math.round(tipRounded * 100) / 100).toFixed(2);
     }
 
@@ -130,7 +132,7 @@ function totalPerPerson(bill, numOfPeople, tip){
     let tipTotalOut = parseFloat(((bill * tip) / numOfPeople) + (bill/numOfPeople))
     
 
-    if(isNaN(tipTotalOut)){
+    if(!isFinite(tipTotalOut)){
         domTotalOutput.innerHTML ='$0.00';
     }else{
         domTotalOutput.innerHTML ='$' + (Math.round(tipTotalOut * 100) / 100).toFixed(2);
