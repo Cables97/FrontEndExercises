@@ -6,6 +6,14 @@ A collection of FrontEnd examples and exercises.
 These small projects are a showcase of ability using real world examples.
 
 
+## [Interactive Pricing Component](https://cables97.github.io/FrontEndExercises/interactive-pricing-component-main/index.html)
+
+![App Screenshot](https://cables97.github.io/FrontEndExercises/interactive-pricing-component-main/images/screenshot.jpg)
+Interactive pricing component with RWD
+
+Built using JavaScript, HTML, and SCSS
+
+
 ## [Time-Tracker Dashboard](https://cables97.github.io/FrontEndExercises/time-tracking-dashboard-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/time-tracking-dashboard-main/images/screenshot.jpg)
