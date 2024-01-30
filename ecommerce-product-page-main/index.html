@@ -12,11 +12,6 @@
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="layout">
@@ -24,26 +19,26 @@
     <div class="nav-bar">
 
       <div class="nav-wrapper">
-        <img src="./images/icon-menu.svg" alt="" class="side-nav-btn">
+        <img src="./images/icon-menu.svg" alt="" class="side-nav-btn btn">
         <a href="#"><img src="./images/logo.svg" alt="" class="logo"></a>
         <nav class="nav-btn-box">
-          <a href="#" class="nav-btn">Collections</a>
-          <a href="#" class="nav-btn">Men</a>
-          <a href="#" class="nav-btn">Women</a>
-          <a href="#" class="nav-btn">About</a>
-          <a href="#" class="nav-btn">Contact</a>
+          <a href="#" class="nav-btn btn">Collections</a>
+          <a href="#" class="nav-btn btn">Men</a>
+          <a href="#" class="nav-btn btn">Women</a>
+          <a href="#" class="nav-btn btn">About</a>
+          <a href="#" class="nav-btn btn">Contact</a>
         </nav>
       </div>
 
 
-      <div class="img-wrapper col-1">
-        <div class="cart">
+      <div class="img-wrapper">
+        <div class="cart btn">
           <img src="./images/icon-cart.svg" alt="" class="img-cart">
           <div class="cart-alert">3</div>
           
         </div>
 
-        <div class="profile">
+        <div class="profile btn">
           <img src="./images/image-avatar.png" alt="" class="img-profile">
         </div>
       </div>
@@ -55,24 +50,27 @@
       <div class="side col-6">
 
         <div class="slideshow">
+          <div class="arrow-btn arrow-btn-r">
+            <img class='arw-btn' src="./images/icon-next.svg" alt="">
+          </div>
+          <div class="arrow-btn arrow-btn-l">
+            <img class='arw-btn' src="./images/icon-previous.svg" alt="">
+          </div>
+
           <div class="main-slide">
             <img class="img" src="./images/image-product-1.jpg" alt="" >
           </div>
 
           <div class="slides">
-
-            <div >
-              <img class="sm-slide" src="./images/image-product-1-thumbnail.jpg" alt="">
+            <div class="active-slide">
+              <img class="sm-slide " src="./images/image-product-1-thumbnail.jpg" alt="">
             </div>
-
             <div >
               <img class="sm-slide" src="./images/image-product-2-thumbnail.jpg" alt="">
             </div>
-
             <div >
               <img class="sm-slide" src="./images/image-product-3-thumbnail.jpg" alt="">
             </div>
-
             <div >
               <img class="sm-slide" src="./images/image-product-4-thumbnail.jpg" alt="">
             </div>
@@ -89,13 +87,123 @@
           <div class="price-box">
             <h1 class="sale-price">$125.00</h1>
             <h3 class="price">$250.00</h3>
+            <div class="discount-box">
+              <p>50%</p>
+            </div>
           </div>
+
           <div class="qnty-btn-box">
+
+            <div class="qnty">
+              <div class="qnty-minus qnty-btn btn">
+                <img src="./images/icon-minus.svg" alt="">
+              </div>
+
+              <div class="qnty-num">
+                <p>0</p>
+              </div>
+
+              <div class="qnty-plus qnty-btn btn">
+                <img src="./images/icon-plus.svg" alt="">
+              </div>
+            </div>
+
+            <div class="cart-btn  qnty-btn btn">
+              <img src="./images/icon-cart.svg" alt="">
+              <p>Add to cart</p>
+            </div>
+
+
             
           </div>
         </div>
       </div>
     </div>
+
+    <div class="lightbox">
+      <span class="close-btn btn">
+        <img src="./images/icon-close.svg" alt="">
+      </span>
+
+      <div class="lightbox-content">
+
+        <div class="lightbox-main">
+          <img class="lightbox-main-img" src="./images/image-product-1.jpg" style="width:100%">
+        </div>
+
+        <div class="lightbox-slides">
+
+          <div class="active-slide">
+            <img class="lightbox-slide" src="./images/image-product-1-thumbnail.jpg" >
+          </div>
+          <div>
+            <img  class="lightbox-slide" src="./images/image-product-2-thumbnail.jpg" >
+          </div>
+          <div >
+            <img class="lightbox-slide" src="./images/image-product-3-thumbnail.jpg" >
+          </div>
+          <div >
+            <img class="lightbox-slide" src="./images/image-product-4-thumbnail.jpg" >
+          </div>
+
+
+        </div>
+
+
+        <div class="arrow-btn arrow-btn-r">
+          <img class='arw-btn' src="./images/icon-next.svg" alt="">
+        </div>
+        <div class="arrow-btn arrow-btn-l">
+          <img class='arw-btn' src="./images/icon-previous.svg" alt="">
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <article id="cart" class="cart-container">
+      
+        <h4 class="cart-title">Cart</h4>
+        <div class="linesplit"></div>
+
+        <div class="cart-contents">
+
+
+          <div class="cart-item">
+            <img class="cart-item-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+           
+            <div class="cart-item-info">
+              <p class="cart-item-title">
+                Fall Limited Edition Sneakers
+              </p>
+
+              <div class="cart-item-pricing">
+                <p class="cart-item-pricing-per">$125.00</p>
+                <p>x</p>
+                <p class="cart-item-pricing-qnty">3</p>
+                <p class="cart-item-pricing-total">$375.00</p>
+              </div>
+            </div>
+
+            <div class="cart-item-delete btn">
+              <img class="cart-item-delete" src="./images/icon-delete.svg" alt="">
+            </div>
+
+          </div>
+
+        <div class="checkout">
+          <div class="checkout-btn btn">
+            <p>Checkout</p>
+          </div>
+        </div>
+
+        </div>
+
+      
+
+    </article>
+
   </main>
 
 
