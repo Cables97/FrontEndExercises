@@ -32,13 +32,13 @@
 
 
       <div class="img-wrapper">
-        <div class="cart btn">
+        <div class="cart-btn btn" id="cart-btn">
           <img src="./images/icon-cart.svg" alt="" class="img-cart">
           <div class="cart-alert">3</div>
           
         </div>
 
-        <div class="profile btn">
+        <div class="profile btn" id="profile-btn">
           <img src="./images/image-avatar.png" alt="" class="img-profile">
         </div>
       </div>
@@ -57,21 +57,21 @@
             <img class='arw-btn' src="./images/icon-previous.svg" alt="">
           </div>
 
-          <div class="main-slide">
+          <div class="main-slide" class="main-slide">
             <img class="img" src="./images/image-product-1.jpg" alt="" >
           </div>
 
           <div class="slides">
-            <div class="active-slide">
+            <div class="active-slide" id="slide1">
               <img class="sm-slide " src="./images/image-product-1-thumbnail.jpg" alt="">
             </div>
-            <div >
+            <div id="slide2" >
               <img class="sm-slide" src="./images/image-product-2-thumbnail.jpg" alt="">
             </div>
-            <div >
+            <div id="slide3">
               <img class="sm-slide" src="./images/image-product-3-thumbnail.jpg" alt="">
             </div>
-            <div >
+            <div id="slide4">
               <img class="sm-slide" src="./images/image-product-4-thumbnail.jpg" alt="">
             </div>
 
@@ -82,12 +82,12 @@
       <div class="col-6 side">
         <div class="lf-info-box">
           <h2 class="brand">SNEAKER COMPANY</h2>
-          <h1 class="title">Fall Limited Edition Sneakers</h1>
+          <h1 class="title" id="item-name">Fall Limited Edition Sneakers</h1>
           <p class="info-blurb">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
           <div class="price-box">
-            <h1 class="sale-price">$125.00</h1>
-            <h3 class="price">$250.00</h3>
-            <div class="discount-box">
+            <h1 class="sale-price" id="sale-price">$125.00</h1>
+            <h3 class="price" id="full-price">$250.00</h3>
+            <div class="discount-box" id="price-discount-notice">
               <p>50%</p>
             </div>
           </div>
@@ -95,20 +95,20 @@
           <div class="qnty-btn-box">
 
             <div class="qnty">
-              <div class="qnty-minus qnty-btn btn">
+              <div class="qnty-minus qnty-btn btn" id="qnty-minus">
                 <img src="./images/icon-minus.svg" alt="">
               </div>
 
-              <div class="qnty-num">
+              <div class="qnty-num" id="qnty">
                 <p>0</p>
               </div>
 
-              <div class="qnty-plus qnty-btn btn">
+              <div class="qnty-plus qnty-btn btn" id="qnty-plus">
                 <img src="./images/icon-plus.svg" alt="">
               </div>
             </div>
 
-            <div class="cart-btn  qnty-btn btn">
+            <div class="cart-add-btn  qnty-btn btn" id="add-to-cart">
               <img src="./images/icon-cart.svg" alt="">
               <p>Add to cart</p>
             </div>
@@ -182,11 +182,11 @@
         <h4 class="cart-title">Cart</h4>
         <div class="linesplit"></div>
 
-        <div class="cart-contents">
+        <div class="cart-contents" id="cart-contents">
 
-
+          <!---->
           <div class="cart-item">
-            <img class="cart-item-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+            <img class="cart-item-img" id="cart-item-img" src="./images/image-product-1.jpg" alt="">
            
             <div class="cart-item-info">
               <p class="cart-item-title">
@@ -202,24 +202,22 @@
             </div>
 
             <div class="cart-item-delete btn">
-              <img class="cart-item-delete" src="./images/icon-delete.svg" alt="">
+              <img src="./images/icon-delete.svg" alt="">
             </div>
-
           </div>
+          <!---->
 
-        <div class="checkout">
-          <div class="checkout-btn btn">
-            <p>Checkout</p>
+          <div class="checkout">
+            <div class="checkout-btn btn">
+              <p>Checkout</p>
+            </div>
           </div>
         </div>
-
-        </div>
-
-      
-
     </article>
 
   </main>
+
+  <script type="module" src="./app.js"></script>
 
 
 </div>

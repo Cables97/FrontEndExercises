@@ -78,7 +78,7 @@ main{
         justify-content: space-around;
         width:150px;
 
-        .cart{
+        .cart-btn{
         position: relative;
             .img-cart:hover{
                 filter: brightness(0);
@@ -347,7 +347,7 @@ main{
                 }
             }
         }
-        .cart-btn{
+        .cart-add-btn{
             height: 100%;
             width:66%;
             display: flex;
@@ -521,7 +521,6 @@ main{
                 flex-direction: column;
                 font-family: $font-family;
                 color:$dark-grayish-blue;
-                @include proxy-border;
 
                 .cart-item-title{
                     line-height: 0;
@@ -588,7 +587,8 @@ main{
 
 @media only screen and (max-width: 500px){
     .layout{
-        width:375px;
+        min-width:375px;
+        max-width:100%;
         height: 100%;
         margin:auto;
     }
@@ -602,7 +602,7 @@ main{
 }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
     .layout{
         @include proxy-border;
@@ -707,7 +707,7 @@ main{
             height:50%;
             width: 100%;
         }
-        .cart-btn{
+        .cart-add-btn{
             height: 50%;
             width:100%;
             flex-direction: row;
@@ -744,11 +744,13 @@ main{
     .col-12 {width: 100%;}
 
     .layout{
-        width:100%;
+        width:90%;
         height: 100%;
         margin:auto;
     }
-    
+    .logo{
+        padding-left: 0;
+    }
 
 }
 
