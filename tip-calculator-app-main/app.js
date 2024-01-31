@@ -14,6 +14,7 @@ const domReset = document.getElementById('reset-button')
 
 let bill = document.getElementById('bill').value;
 let numOfPeople = domNumOfPeople.value;
+let customBool = false;
 
 
 
@@ -25,6 +26,7 @@ domTip5.onclick = function(){
       });
     domTip5.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = false;
     calculate();
   }; 
 
@@ -35,6 +37,7 @@ domTip10.onclick = function(){
       });
     domTip10.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = false;
     calculate();
 }; 
 domTip15.onclick = function(){
@@ -44,6 +47,7 @@ domTip15.onclick = function(){
       });
     domTip15.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = false;
     calculate();
 };
 domTip25.onclick = function(){
@@ -53,6 +57,7 @@ domTip25.onclick = function(){
       });
     domTip25.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = false;
     calculate();
 };
 domTip50.onclick = function(){
@@ -62,6 +67,7 @@ domTip50.onclick = function(){
       });
     domTip50.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = false;
     calculate();
 };
 domTipCustom.onclick = function(){
@@ -71,6 +77,7 @@ domTipCustom.onclick = function(){
       });
     domTipCustom.classList.add('active');
     console.log('current tip = ' + tip)
+    customBool = true;
     calculate();
 };
 
@@ -97,6 +104,9 @@ setInterval(calculate,1000);
 // (Bill * Tip) / numOfPeople == total/person
 
 function calculate(){
+    if(customBool){
+        tip = domTipCustom.value / 100;
+    }
     bill = document.getElementById('bill').value;
     numOfPeople = domNumOfPeople.value;
 
