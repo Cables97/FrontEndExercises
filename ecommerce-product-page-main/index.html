@@ -1,229 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-</head>
-<body>
-  <div class="layout">
-  <header>
-    <div class="nav-bar">
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <div class="nav-bar">
+          <div class="nav-wrapper">
+            <div id="side-nav-open">
+              <img
+                src="./images/icon-menu.svg"
+                alt=""
+                class="side-nav-btn btn"
+              />
+            </div>
 
-      <div class="nav-wrapper">
-        <img src="./images/icon-menu.svg" alt="" class="side-nav-btn btn">
-        <a href="#"><img src="./images/logo.svg" alt="" class="logo"></a>
-        <nav class="nav-btn-box">
-          <a href="#" class="nav-btn btn">Collections</a>
-          <a href="#" class="nav-btn btn">Men</a>
-          <a href="#" class="nav-btn btn">Women</a>
-          <a href="#" class="nav-btn btn">About</a>
-          <a href="#" class="nav-btn btn">Contact</a>
-        </nav>
-      </div>
-
-
-      <div class="img-wrapper">
-        <div class="cart-btn btn" id="cart-btn">
-          <img src="./images/icon-cart.svg" alt="" class="img-cart">
-          <div class="cart-alert">3</div>
-          
-        </div>
-
-        <div class="profile btn" id="profile-btn">
-          <img src="./images/image-avatar.png" alt="" class="img-profile">
-        </div>
-      </div>
-
-    </div>
-  </header>
-  <main>
-    <div class="row">
-      <div class="side col-6">
-
-        <div class="slideshow">
-          <div class="arrow-btn arrow-btn-r">
-            <img class='arw-btn' src="./images/icon-next.svg" alt="">
-          </div>
-          <div class="arrow-btn arrow-btn-l">
-            <img class='arw-btn' src="./images/icon-previous.svg" alt="">
+            <a href="#"><img src="./images/logo.svg" alt="" class="logo" /></a>
+            <nav class="nav-btn-box">
+              <a href="#" class="nav-btn btn">Collections</a>
+              <a href="#" class="nav-btn btn">Men</a>
+              <a href="#" class="nav-btn btn">Women</a>
+              <a href="#" class="nav-btn btn">About</a>
+              <a href="#" class="nav-btn btn">Contact</a>
+            </nav>
           </div>
 
-          <div class="main-slide" class="main-slide">
-            <img class="img" src="./images/image-product-1.jpg" alt="" >
-          </div>
-
-          <div class="slides">
-            <div class="active-slide" id="slide1">
-              <img class="sm-slide " src="./images/image-product-1-thumbnail.jpg" alt="">
-            </div>
-            <div id="slide2" >
-              <img class="sm-slide" src="./images/image-product-2-thumbnail.jpg" alt="">
-            </div>
-            <div id="slide3">
-              <img class="sm-slide" src="./images/image-product-3-thumbnail.jpg" alt="">
-            </div>
-            <div id="slide4">
-              <img class="sm-slide" src="./images/image-product-4-thumbnail.jpg" alt="">
+          <div class="img-wrapper">
+            <div class="cart-btn btn" id="cart-btn">
+              <img src="./images/icon-cart.svg" alt="" class="img-cart" />
+              <div class="cart-count" id="cart-count">3</div>
             </div>
 
+            <div class="profile btn" id="profile-btn">
+              <img src="./images/image-avatar.png" alt="" class="img-profile" />
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-6 side">
-        <div class="lf-info-box">
-          <h2 class="brand">SNEAKER COMPANY</h2>
-          <h1 class="title" id="item-name">Fall Limited Edition Sneakers</h1>
-          <p class="info-blurb">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer</p>
-          <div class="price-box">
-            <h1 class="sale-price" id="sale-price">$125.00</h1>
-            <h3 class="price" id="full-price">$250.00</h3>
-            <div class="discount-box" id="price-discount-notice">
-              <p>50%</p>
-            </div>
-          </div>
-
-          <div class="qnty-btn-box">
-
-            <div class="qnty">
-              <div class="qnty-minus qnty-btn btn" id="qnty-minus">
-                <img src="./images/icon-minus.svg" alt="">
+      </header>
+      <main>
+        <div class="row">
+          <div class="side col-6">
+            <div class="slideshow">
+              <div class="arrow-btn arrow-btn-r" id="arrow-btn-r">
+                <img class="arw-btn" src="./images/icon-next.svg" alt="" />
+              </div>
+              <div class="arrow-btn arrow-btn-l" id="arrow-btn-l">
+                <img class="arw-btn" src="./images/icon-previous.svg" alt="" />
               </div>
 
-              <div class="qnty-num" id="qnty">
-                <p>0</p>
+              <div class="main-slide">
+                <img
+                  id="main-slide"
+                  class="img"
+                  src="./images/image-product-1.jpg"
+                  alt=""
+                />
               </div>
 
-              <div class="qnty-plus qnty-btn btn" id="qnty-plus">
-                <img src="./images/icon-plus.svg" alt="">
+              <div class="slides">
+                <div class="active-slide" id="slide1box">
+                  <img
+                    class="sm-slide"
+                    src="./images/image-product-1.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div id="slide2box">
+                  <img
+                    class="sm-slide"
+                    src="./images/image-product-2.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div id="slide3box">
+                  <img
+                    class="sm-slide"
+                    src="./images/image-product-3.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div id="slide4box">
+                  <img
+                    class="sm-slide"
+                    src="./images/image-product-4.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
-
-            <div class="cart-add-btn  qnty-btn btn" id="add-to-cart">
-              <img src="./images/icon-cart.svg" alt="">
-              <p>Add to cart</p>
-            </div>
-
-
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lightbox">
-      <span class="close-btn btn">
-        <img src="./images/icon-close.svg" alt="">
-      </span>
-
-      <div class="lightbox-content">
-
-        <div class="lightbox-main">
-          <img class="lightbox-main-img" src="./images/image-product-1.jpg" style="width:100%">
-        </div>
-
-        <div class="lightbox-slides">
-
-          <div class="active-slide">
-            <img class="lightbox-slide" src="./images/image-product-1-thumbnail.jpg" >
-          </div>
-          <div>
-            <img  class="lightbox-slide" src="./images/image-product-2-thumbnail.jpg" >
-          </div>
-          <div >
-            <img class="lightbox-slide" src="./images/image-product-3-thumbnail.jpg" >
-          </div>
-          <div >
-            <img class="lightbox-slide" src="./images/image-product-4-thumbnail.jpg" >
           </div>
 
-
-        </div>
-
-
-        <div class="arrow-btn arrow-btn-r">
-          <img class='arw-btn' src="./images/icon-next.svg" alt="">
-        </div>
-        <div class="arrow-btn arrow-btn-l">
-          <img class='arw-btn' src="./images/icon-previous.svg" alt="">
-        </div>
-      </div>
-
-
-
-    </div>
-
-    <div id="side-nav" class="side-nav">
-      <div class="side-nav-wrapper">
-        <span class="close-btn btn">
-          <img src="./images/icon-close.svg" alt="">
-        </span>
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-
-    </div>
-
-
-    <article id="cart" class="cart-container">
-      
-        <h4 class="cart-title">Cart</h4>
-        <div class="linesplit"></div>
-
-        <div class="cart-contents" id="cart-contents">
-
-          <!---->
-          <div class="cart-item">
-            <img class="cart-item-img" id="cart-item-img" src="./images/image-product-1.jpg" alt="">
-           
-            <div class="cart-item-info">
-              <p class="cart-item-title">
+          <div class="col-6 side">
+            <div class="lf-info-box">
+              <h2 class="brand">SNEAKER COMPANY</h2>
+              <h1 class="title" id="item-name">
                 Fall Limited Edition Sneakers
+              </h1>
+              <p class="info-blurb">
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they'll
+                withstand everything the weather can offer
               </p>
-
-              <div class="cart-item-pricing">
-                <p class="cart-item-pricing-per">$125.00</p>
-                <p>x</p>
-                <p class="cart-item-pricing-qnty">3</p>
-                <p class="cart-item-pricing-total">$375.00</p>
+              <div class="price-box">
+                <h1 class="sale-price" id="sale-price">$125.00</h1>
+                <h3 class="price" id="full-price">$250.00</h3>
+                <div class="discount-box" id="price-discount-notice">
+                  <p>50%</p>
+                </div>
               </div>
-            </div>
 
-            <div class="cart-item-delete btn">
-              <img src="./images/icon-delete.svg" alt="">
-            </div>
-          </div>
-          <!---->
+              <div class="qnty-btn-box">
+                <div class="qnty">
+                  <div class="qnty-minus qnty-btn btn" id="qnty-minus">
+                    <img src="./images/icon-minus.svg" alt="" />
+                  </div>
 
-          <div class="checkout">
-            <div class="checkout-btn btn">
-              <p>Checkout</p>
+                  <div class="qnty-num" id="qnty">
+                    <p>0</p>
+                  </div>
+
+                  <div class="qnty-plus qnty-btn btn" id="qnty-plus">
+                    <img src="./images/icon-plus.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="cart-add-btn qnty-btn btn" id="add-to-cart">
+                  <img src="./images/icon-cart.svg" alt="" />
+                  <p>Add to cart</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    </article>
 
-  </main>
-
-  <script type="module" src="./app.js"></script>
+        <div class="lightbox" id="lightbox">
 
 
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://cables97.github.io/">Caleb -Cables- Universe 2024</a>.
-  </div>
-</body>
+          <div class="lightbox-content">
+            <span class="close-btn btn" id="lightbox-close-btn">
+              <img src="./images/icon-close.svg" alt="" />
+            </span>
+
+            <div class="lightbox-main">
+              <img
+                class="lightbox-main-img"
+                id="lightbox-main"
+                src="./images/image-product-1.jpg"
+                style="width: 100%"
+              />
+            </div>
+
+            <div class="lightbox-slides">
+              <div class="active-slide" id="lightbox-slide-1">
+                <img
+                  class="lightbox-slide"
+                  src="./images/image-product-1-thumbnail.jpg"
+                />
+              </div>
+              <div id="lightbox-slide-2">
+                <img
+                  class="lightbox-slide"
+                  src="./images/image-product-2-thumbnail.jpg"
+                />
+              </div>
+              <div id="lightbox-slide-3">
+                <img
+                  class="lightbox-slide"
+                  src="./images/image-product-3-thumbnail.jpg"
+                />
+              </div>
+              <div id="lightbox-slide-4">
+                <img
+                  class="lightbox-slide"
+                  src="./images/image-product-4-thumbnail.jpg"
+                />
+              </div>
+            </div>
+
+            <div class="arrow-btn arrow-btn-r" id="lightbox-arrow-r">
+              <img class="arw-btn" src="./images/icon-next.svg" alt="" />
+            </div>
+            <div class="arrow-btn arrow-btn-l" id="lightbox-arrow-l">
+              <img class="arw-btn" src="./images/icon-previous.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div id="side-nav" class="side-nav">
+          <div class="side-nav-wrapper" id="side-nav-wrapper">
+            <span class="close-btn btn" id="side-nav-close">
+              <img src="./images/icon-close.svg" alt="" />
+            </span>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+
+        <article id="cart" class="cart-container">
+          <h4 class="cart-title">Cart</h4>
+          <div class="linesplit"></div>
+
+          <div class="cart-contents" id="cart-contents">
+            <!---->
+            <div class="cart-item">
+              <img
+                class="cart-item-img"
+                id="cart-item-img"
+                src="./images/image-product-1.jpg"
+                alt=""
+              />
+
+              <div class="cart-item-info">
+                <p class="cart-item-title">Fall Limited Edition Sneakers</p>
+
+                <div class="cart-item-pricing">
+                  <p class="cart-item-pricing-per">$125.00</p>
+                  <p>x</p>
+                  <p class="cart-item-pricing-qnty">3</p>
+                  <p class="cart-item-pricing-total">$375.00</p>
+                </div>
+              </div>
+
+              <div class="cart-item-delete btn">
+                <img src="./images/icon-delete.svg" alt="" />
+              </div>
+            </div>
+            <!---->
+
+            <div class="empty-cart" id="empty-cart">
+              <p>Your cart is empty</p>
+            </div>
+
+            <div class="checkout" id="checkout-btn">
+              <div class="checkout-btn btn">
+                <p>Checkout</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <script type="module" src="./app.js"></script>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://cables97.github.io/">Caleb -Cables- Universe 2024</a>.
+    </div>
+  </body>
 </html>

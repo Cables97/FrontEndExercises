@@ -13,6 +13,7 @@ main {
 
 .layout {
   width: 60%;
+  max-width: 1200px;
   height: 100%;
   margin: auto;
 }
@@ -65,7 +66,7 @@ main {
 .nav-bar .img-wrapper .cart-btn .img-cart:hover {
   filter: brightness(0);
 }
-.nav-bar .img-wrapper .cart-btn .cart-alert {
+.nav-bar .img-wrapper .cart-btn .cart-count {
   position: absolute;
   top: -6px;
   left: 10px;
@@ -102,8 +103,15 @@ main {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 995;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
 }
 .side-nav .side-nav-wrapper {
+  display: inherit;
   height: 100%;
   width: 250px;
   position: fixed;
@@ -112,9 +120,14 @@ main {
   left: 0;
   background-color: hsl(0, 0%, 100%);
   padding: 32px;
-  transition: 0.5s;
   display: flex;
   flex-direction: column;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
 }
 .side-nav .side-nav-wrapper .close-btn {
   position: relative;
@@ -225,9 +238,8 @@ main {
   font-size: 0.75em;
 }
 .lf-info-box .title {
-  font-size: 3em;
   margin-top: 20px;
-  font-size: 2em;
+  font-size: 3em;
   line-height: 120%;
 }
 .lf-info-box .info-blurb {
@@ -354,6 +366,25 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.lightbox .lightbox-content .close-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+.lightbox .lightbox-content .close-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
+}
+.lightbox .lightbox-content .close-btn:hover {
+  filter: invert(49%) sepia(93%) saturate(1066%) hue-rotate(347deg) brightness(101%) contrast(101%);
+}
 .lightbox .lightbox-content .lightbox-main .lightbox-main-img {
   width: 500px;
   border-radius: 20px;
@@ -401,25 +432,6 @@ main {
   top: 35%;
   right: -30px;
 }
-.lightbox .close-btn {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 80px;
-  left: 1200px;
-}
-.lightbox .close-btn img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
-}
-.lightbox .close-btn:hover {
-  filter: invert(49%) sepia(93%) saturate(1066%) hue-rotate(347deg) brightness(101%) contrast(101%);
-}
 
 .cart-container {
   display: none;
@@ -429,6 +441,7 @@ main {
   width: 30%;
   min-width: 320px;
   max-width: 500px;
+  min-height: 275px;
   background-color: hsl(0, 0%, 100%);
   overflow: visible;
   z-index: 99;
@@ -444,13 +457,14 @@ main {
 .cart-container .linesplit {
   width: 100%;
   height: 0;
-  margin-bottom: 20px;
   border-bottom: 2px solid rgba(182, 188, 200, 0.4);
 }
 .cart-container .cart-contents {
+  min-height: 200px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: space-around;
+  padding: 10px;
 }
 .cart-container .cart-contents .cart-item {
   display: flex;
@@ -459,6 +473,7 @@ main {
   width: 100%;
   justify-content: space-between;
   margin: 5px 0;
+  padding: 10px;
 }
 .cart-container .cart-contents .cart-item .cart-item-img {
   height: 48px;
@@ -490,10 +505,17 @@ main {
 .cart-container .cart-contents .cart-item .cart-item-delete:hover {
   filter: grayscale(50%) brightness(20%);
 }
+.cart-container .cart-contents .empty-cart {
+  display: none;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+  justify-content: center;
+}
 .cart-container .cart-contents .checkout {
   z-index: 99;
   height: 50px;
-  margin: 10px 0 40px 0;
+  margin: 10px 0;
 }
 .cart-container .cart-contents .checkout .checkout-btn {
   width: 100%;
@@ -503,7 +525,8 @@ main {
   background-color: hsl(26, 100%, 55%);
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(0, 0%, 100%);
-  line-height: 300%;
+  display: flex;
+  justify-content: center;
 }
 .cart-container .cart-contents .checkout .checkout-btn:hover {
   filter: grayscale(50%) brightness(150%);
@@ -530,7 +553,6 @@ main {
 }
 @media only screen and (max-width: 900px) {
   .layout {
-    border: 2px solid red;
     max-width: 60%;
     min-width: 375px;
     height: 100%;
