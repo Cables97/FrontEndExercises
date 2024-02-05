@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(180, 52%, 96%);
+}
+
+.content-wrapper {
+  border: 2px solid red;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.job-posting {
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.job-posting .logo {
+  margin: 20px 20px 20px 40px;
+}
+.job-posting .posting-info {
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan", sans-serif;
+  line-height: 0;
+}
+.job-posting .posting-info .tag-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.job-posting .posting-info .tag-wrapper h2 {
+  color: hsl(180, 29%, 50%);
+  font-size: 15px;
+  margin-right: 10px;
+}
+.job-posting .posting-info .tag-wrapper .tag {
+  padding: 5px 5px 0 5px;
+  margin-left: 10px;
+  height: 20px;
+  line-height: 100%;
+  text-align: center;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: white;
+  border-radius: 12px;
+}
+.job-posting .posting-info .tag-wrapper .featured {
+  background-color: hsl(180, 14%, 20%);
+}
+.job-posting .posting-info .tag-wrapper .new {
+  background-color: hsl(180, 29%, 50%);
+}
+.job-posting .posting-info h1 {
+  color: hsl(180, 14%, 20%);
+  font-weight: 700;
+  font-size: 20px;
+}
+.job-posting .posting-info .sub-info {
+  display: flex;
+  flex-direction: row;
+  color: hsl(180, 8%, 52%);
+  font-weight: 500;
+  font-size: 15px;
+  justify-content: space-between;
+}
+.job-posting .posting-info .sub-info .center-dot {
+  border: 2px solid red;
+  text-align: center;
+  line-height: 0;
+  margin: 10px;
+}
+.job-posting .language-wrapper {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 40px;
+}
+.job-posting .language-wrapper .lang-btn {
+  position: relative;
+  height: 2em;
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.job-posting .language-wrapper .lang-btn p {
+  font-family: "League Spartan", sans-serif;
+  color: hsl(180, 29%, 50%);
+  text-align: center;
+  margin: 0.5em;
+}
+.job-posting .featured-bar {
+  height: 100%;
+  width: 6px;
+  left: 0px;
+  position: absolute;
+  background-color: hsl(180, 29%, 50%);
+}/*# sourceMappingURL=styles.css.map */

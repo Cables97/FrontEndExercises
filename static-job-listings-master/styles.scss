@@ -1,0 +1,136 @@
+$primary-cyan:hsl(180, 29%, 50%);
+$light-Grayish-Cyan : hsl(180, 52%, 96%);//(Background)
+$filter-btn: hsl(180, 31%, 95%);//(Filter Tablets)
+$dark-Grayish-Cyan: hsl(180, 8%, 52%);
+$very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+
+$font-fam: 'League Spartan', sans-serif;
+
+
+
+
+@mixin proxy-border{
+    border: 2px solid red;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: $light-Grayish-Cyan;
+}
+
+.content-wrapper{
+    @include proxy-border;
+    width: 80%;
+    margin:auto;
+    margin-top:40px;
+}
+
+.job-posting{
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    .logo{
+        margin: 20px 20px 20px 40px;
+    }
+
+    .posting-info{
+        display: flex;
+        flex-direction: column;
+        font-family: $font-fam;
+        line-height: 0;
+        .tag-wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            h2{
+                color:$primary-cyan;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+            .tag{
+                padding:5px 5px 0 5px;
+                margin-left:10px;
+                height: 20px;
+                line-height: 100%;
+                text-align: center;
+                font-size: .75em;
+                font-weight: 700;
+                color:white;
+                border-radius: 12px;
+            }
+            .featured{
+                background-color: $very-Dark-Grayish-Cyan;
+            }
+            .new{
+                background-color: $primary-cyan;
+            }
+
+
+        }
+
+
+        h1{
+            color:$very-Dark-Grayish-Cyan;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .sub-info{
+            display:flex;
+            flex-direction: row;
+            color:$dark-Grayish-Cyan;
+            font-weight: 500;
+            font-size: 15px;
+            justify-content: space-between;
+            .center-dot{
+                @include proxy-border;
+                text-align: center;
+                line-height: 0;
+                margin: 10px;
+            }
+        }
+    }
+
+    .language-wrapper{
+        flex-grow: 2;
+        display:flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-right:40px;
+
+        .lang-btn{
+            position: relative;
+            height: 2em;
+            background-color: $filter-btn;
+            border-radius: 5px;
+            margin: 0 10px;
+
+            p{
+                font-family: $font-fam;
+                color:$primary-cyan;
+                text-align: center;
+                margin:.5em;
+            }
+        }
+
+        
+    }
+
+    .featured-bar{
+        height:100%;
+        width: 6px;
+        left:0px;
+        position: absolute;
+        background-color: $primary-cyan;
+    }
+
+
+
+
+}

@@ -1,5 +1,31 @@
 {
     "cSpell.words": [
         "desaturated"
+    ],
+    "folder-color.pathColors": [
+        {
+            "folderPath": "FrontEndTutor\\static-job-listings-master\\",
+            "color": "foldercolorizer.LightPink"
+        },
+        {
+            "folderPath": "FrontEndTutor\\base-apparel-coming-soon-master\\",
+            "color": "foldercolorizer.BlueViolet"
+        },
+        {
+            "folderPath": "FrontEndTutor\\ecommerce-product-page-main\\",
+            "color": "foldercolorizer.CarrotOrange"
+        },
+        {
+            "folderPath": "FrontEndTutor\\interactive-pricing-component-main\\",
+            "color": "foldercolorizer.LightBlue"
+        },
+        {
+            "folderPath": "FrontEndTutor\\time-tracking-dashboard-main\\",
+            "color": "foldercolorizer.AliceBlue"
+        },
+        {
+            "folderPath": "FrontEndTutor\\tip-calculator-app-main\\",
+            "color": "foldercolorizer.SpringGreen"
+        }
     ]
 }
