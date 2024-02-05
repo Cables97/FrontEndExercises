@@ -4,7 +4,7 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
-## [Interactive Pricing Component](https://cables97.github.io/FrontEndExercises/ecommerce-product-page-main/index.html)
+## [eCommerce Product Page](https://cables97.github.io/FrontEndExercises/ecommerce-product-page-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/ecommerce-product-page-main/images/screenshot.jpg)
 eCommerce product page with RWD
