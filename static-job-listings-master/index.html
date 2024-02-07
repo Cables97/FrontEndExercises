@@ -22,16 +22,39 @@
 <body>
 
   <main>
-    <div class="content-wrapper">
 
-      <div class="job-posting">
 
-        <div class="logo">
-          <img src="./images/photosnap.svg" alt="">
+    <img class="background" src="./images/bg-header-desktop.svg" alt="">
+    
+    <div class="filter-bar" id='filter-bar' >
+
+      <div class="filter-btn " id="frontend-filter">
+        <p class="p">Frontend</p>
+        <div class="cancel-btn">
+          <img src="./images/icon-remove.svg" alt="">
         </div>
+      </div>
+
+      <div class="filter-btn" id="all-filter">
+        <p class="p">all</p>
+        <div class="cancel-btn">
+          <img src="./images/icon-remove.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="content-wrapper" id="posting-board">
+
+      <div class="job-posting filterDiv frontend">
+
+        
+        <img class="logo" src="./images/photosnap.svg" alt="">
+        
 
         <div class="posting-info">
-          <div class="tag-wrapper">
+          <div class="title-wrapper">
             <h2>Photosnap</h2>
             <div class="new tag">NEW!</div>
             <div class="featured tag">FEATURED</div>
@@ -49,19 +72,19 @@
 
         </div>
 
-        <div class="language-wrapper">
-          <div class="lang-btn">
+        <div class="linesplit"></div>
+
+        <div class="tag-wrapper">
+          <div class="tag-btn">
             <p>Frontend</p>
           </div>
-          <div class="lang-btn">
+          <div class="tag-btn">
             <p>Senior</p>
           </div>
           
         </div>
         
         <div class="featured-bar"></div>
-
-
 
       </div>
 
@@ -71,33 +94,10 @@
 
   </main>
 
-
-
-
-
-
-
-
-
-  <div>
-  <!-- Item Start -->
-  Company
-  New!
-  Featured
-  Position
-  postedAt
-  contract
-  location
-  <!-- Role -->
-  role
-  <!-- Level -->
-  level
-  <!-- Languages -->
-  languages
-  languages
-  languages
-  <!-- Item End -->
-  </div>
+  <script>
+   
+    </script>
+    
  
   <script type="module" src="./app.js"></script>
   <div class="attribution">
