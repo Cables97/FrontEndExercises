@@ -27,7 +27,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  border: 2px solid red;
 }
 .filter-bar .filter-btn {
   display: flex;
@@ -57,6 +56,9 @@ body {
   border-radius: 0 5px 5px 0;
   background-color: hsl(180, 29%, 50%);
 }
+.filter-bar .filter-btn:hover {
+  cursor: pointer;
+}
 .filter-bar .filter-btn:hover > .cancel-btn {
   background-color: black;
   cursor: pointer;
@@ -66,7 +68,6 @@ body {
   width: 80%;
   margin: auto;
   margin-top: 40px;
-  border: 2px solid red;
 }
 
 .job-posting {
@@ -246,33 +247,6 @@ body {
     margin: 5px 5px;
   }
 }
-.filterDiv {
-  display: none;
-}
-
 .show {
   display: flex;
-}
-
-.container {
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
 }/*# sourceMappingURL=styles.css.map */

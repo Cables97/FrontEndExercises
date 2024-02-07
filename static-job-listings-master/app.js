@@ -31,15 +31,7 @@ let arrFilterList = [];
 //Event Listeners
 //-------------------------------------
 
-domFltrFrontEnd.addEventListener('click',() =>{
-    filterSelection('frontend');
-    console.log('front end filter click');
-});
 
-domFltrSenior.addEventListener('click',() =>{
-    filterSelection('all');
-    console.log('css filter click');
-});
 
 //-------------------------------------
 //functions
@@ -71,15 +63,18 @@ function buildPostings(e){
     });
 
     document.getElementById('posting-board').append(jobPosting);
+
     //logo img
     let jobLogo = document.createElement("img");
     jobLogo.classList.add("logo");
     jobLogo.src = e.logo;
     jobPosting.prepend(jobLogo);
+
     //posting info wrapper
     let jobPostingInfo = document.createElement("div");
     jobPostingInfo.classList.add('posting-info');
     jobPosting.append(jobPostingInfo);
+
         //company/tag wrapper
         let jobTitleWrapper = document.createElement('div');
         jobTitleWrapper.classList.add('title-wrapper');
@@ -215,16 +210,34 @@ function buildPostings(e){
 }
 
 function filterList(){
+  console.log('filter list: ' + arrFilterList);
+  let domFilterBar = document.getElementById('filter-bar');
+  domFilterBar.innerHTML = '';
     arrFilterList.forEach(element => {
-      
 
+      let filterBtn = document.createElement('div')
+      filterBtn.classList.add('filter-btn')
+      domFilterBar.append(filterBtn);
 
+      filterBtn.addEventListener('click', () =>{
+        filterListRemove(element);
+        console.log('filter list: ' + arrFilterList);
+        filterBtn.remove();
+      })
 
+      let filterBtnTxt = document.createElement('p')
+      filterBtnTxt.innerHTML = element;
+      filterBtn.append(filterBtnTxt);
 
-      
+      let filterBtnCancel = document.createElement('div')
+      filterBtnCancel.classList.add('cancel-btn')
+      filterBtn.append(filterBtnCancel);
+
+      let filterBtnCancelImg= document.createElement('img')
+      filterBtnCancelImg.src = "./images/icon-remove.svg";
+      filterBtnCancel.append(filterBtnCancelImg);
+
   });
-
-
 }
 
 function filterListAdd(e){
@@ -233,15 +246,13 @@ function filterListAdd(e){
     arrFilterList.push(e);
     console.log('filter list: ' + arrFilterList)
   }
+  filterList();
 }
 
 function filterListRemove(e){
   console.log('filter item removed: ' + e)
   arrFilterList.splice(arrFilterList.indexOf(e),1);
-
-  if(arrFilterList.length == 0){
-    filterListAdd('all');
-  }
+  filterList();
 }
 
 
