@@ -4,6 +4,15 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
+## [Static Job Listing](https://cables97.github.io/FrontEndExercises/static-job-listings-master/index.html)
+
+![App Screenshot](https://cables97.github.io/FrontEndExercises/static-job-listings-master/images/screenshot.jpg)
+Job Listing page with filtering. 
+
+Built using JavaScript, HTML, and SCSS
+
+
+
 ## [eCommerce Product Page](https://cables97.github.io/FrontEndExercises/ecommerce-product-page-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/ecommerce-product-page-main/images/screenshot.jpg)

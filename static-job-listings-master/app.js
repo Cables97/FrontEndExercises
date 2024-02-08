@@ -42,7 +42,7 @@ data.forEach(e => {
     buildPostings(e);
 });
 
-filterSelection("all")
+filterMaster();
 
 
 //builds each job posting based on indiv JSON objects
@@ -53,6 +53,7 @@ function buildPostings(e){
 
     jobPosting.classList.add(e.level.toLowerCase());
     jobPosting.classList.add(e.role.toLowerCase());
+    jobPosting.classList.add('all');
 
     e.languages.forEach(element => {
         jobPosting.classList.add(element.toLowerCase());
@@ -151,7 +152,7 @@ function buildPostings(e){
 
         jobTagRole.addEventListener('click', () =>{
           console.log('clicked: ' + e.role.toLowerCase())
-          filterSelection(e.role);
+          filterListAdd(e.role)
         })
 
             let jobTagRoleTxt = document.createElement('p')
@@ -164,7 +165,7 @@ function buildPostings(e){
 
         jobTagLevel.addEventListener('click', () =>{
           console.log('clicked: ' + e.level.toLowerCase())
-          filterSelection(e.level);
+          filterListAdd(e.level)
         })
 
             let jobTagLevelTxt = document.createElement('p')
@@ -172,36 +173,36 @@ function buildPostings(e){
             jobTagLevel.append(jobTagLevelTxt);
 
         //languages tags
-        e.languages.forEach(element => {
+        e.languages.forEach(lang => {
             let jobTag = document.createElement('div');
             jobTag.classList.add('tag-btn');
             jobTagWrapper.append(jobTag);
 
             //Add event listener to each button that attaches a Filter Function
             jobTag.addEventListener('click', () =>{
-              console.log('clicked: ' + element)
-              filterSelection(element);
+              console.log('clicked: ' + lang)
+              filterListAdd(lang);
             })
     
                 let jobTagTxt = document.createElement('p')
-                jobTagTxt.innerHTML = element;
+                jobTagTxt.innerHTML = lang;
                 jobTag.append(jobTagTxt);
         });
 
         //tools tags
-        e.tools.forEach(element => {
+        e.tools.forEach(tool => {
             let jobTag = document.createElement('div');
             jobTag.classList.add('tag-btn');
             jobTagWrapper.append(jobTag);
 
             //Add event listener to each button that attaches a Filter Function
             jobTag.addEventListener('click', () =>{
-              console.log('clicked: ' + element)
-              filterSelection(element);
+              console.log('clicked: ' + tool)
+              filterListAdd(tool);
             })
     
                 let jobTagTxt = document.createElement('p')
-                jobTagTxt.innerHTML = element;
+                jobTagTxt.innerHTML = tool;
                 jobTag.append(jobTagTxt);
         });
 
@@ -209,10 +210,12 @@ function buildPostings(e){
 
 }
 
-function filterList(){
+function buildFilterBtn(){
   console.log('filter list: ' + arrFilterList);
   let domFilterBar = document.getElementById('filter-bar');
   domFilterBar.innerHTML = '';
+  
+  if(arrFilterList.length > 0){
     arrFilterList.forEach(element => {
 
       let filterBtn = document.createElement('div')
@@ -221,7 +224,6 @@ function filterList(){
 
       filterBtn.addEventListener('click', () =>{
         filterListRemove(element);
-        console.log('filter list: ' + arrFilterList);
         filterBtn.remove();
       })
 
@@ -238,46 +240,70 @@ function filterList(){
       filterBtnCancel.append(filterBtnCancelImg);
 
   });
+
+  let clearBtn = document.createElement('button');
+  clearBtn.innerHTML = 'Clear';
+  clearBtn.classList.add('clear-btn')
+  domFilterBar.append(clearBtn);
+  }
 }
 
-function filterListAdd(e){
+function filterListAdd(f){
+  let e = f.toLowerCase();
   if (!arrFilterList.includes(e)){
     console.log('filter item added: ' + e)
     arrFilterList.push(e);
-    console.log('filter list: ' + arrFilterList)
   }
-  filterList();
+  buildFilterBtn();
+  filterMaster();
 }
 
-function filterListRemove(e){
+function filterListRemove(f){
+  let e = f.toLowerCase();
   console.log('filter item removed: ' + e)
   arrFilterList.splice(arrFilterList.indexOf(e),1);
-  filterList();
+  buildFilterBtn();
+  filterMaster();
 }
 
+function filterMaster(){
+  if(arrFilterList.length >= 1){
+    arrFilterList.forEach(filter => {
+      console.log('masterfilter: ' + filter);
+      filterSelection(filter)
+    });
+  } else (filterSelection('all'))
+}
 
 function filterSelection(filter) {
   let x = document.getElementsByClassName("job-posting");
   let c = filter.toLowerCase();
 
-  filterListAdd(filter);
+  
 
-
-  console.log('filtering: ' + c);
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (let i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  }
+
+
+
+  for (let i = 0; i < x.length; i++) {
+    if(x[i].classList.contains(c)){
+    console.log('filtering: ' + c);
+      addClass(x[i], 'show');
+    }
+
   }
 }
 
 // Show filtered elements
 function addClass(element, name) {
   element.classList.add(name);
+  console.log( element + ' added ' + name);
 }
 
 // Hide elements that are not selected
 function removeClass(element, name) {
   element.classList.remove(name);
+  console.log( element + ' removed ' + name);
 }

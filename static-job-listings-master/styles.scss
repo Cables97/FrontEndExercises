@@ -20,7 +20,16 @@ body{
     background-color: $light-Grayish-Cyan;
 }
 
-.background{
+.background-dktp{
+    display:inherit;
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: -1; 
+}
+
+.background-mobile{
+    display:none;
     width:100%;
     position: fixed;
     top:0;
@@ -30,7 +39,7 @@ body{
 .filter-bar{
     z-index:2;
     min-height:4em;
-    margin:80px auto 0;
+    margin:180px auto 0;
     width: 80%;
     background-color: white;
     box-shadow: 0px 4px 3px 3px rgba($color: $primary-cyan, $alpha: .25);
@@ -49,6 +58,7 @@ body{
         font-family: $font-fam;
         margin: 0 10px;
         border-radius: 5px;
+        text-transform: capitalize;
         p{
             height:100%;
             margin:10px;
@@ -68,14 +78,32 @@ body{
             background-color: $primary-cyan;
         }
 
-        
-
     }
     .filter-btn:hover{
         cursor: pointer;
     }
     .filter-btn:hover > .cancel-btn {
         background-color: black;
+        cursor: pointer;
+    }
+
+    .clear-btn{
+        width:4em;
+        height:2.6em;
+        border: none;
+        color: $dark-Grayish-Cyan;
+        background-color: inherit;
+        font-family: $font-fam;
+        font-size: 18px;
+        text-decoration: none;
+        margin-right: 2em;
+        margin-left:auto;
+
+    }
+
+    .clear-btn:hover{
+        color: $primary-cyan;
+        text-decoration: underline;
         cursor: pointer;
     }
 
@@ -286,8 +314,20 @@ body{
         }
     }
 
-    
+    .background-dktp{
+        display:none;
 
+    }
+    
+    .background-mobile{
+        display:inherit;
+
+    }
+
+    .filter-bar{
+        margin:130px auto 0;
+
+    }
 }
 
 

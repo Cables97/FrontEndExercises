@@ -8,7 +8,16 @@ body {
   background-color: hsl(180, 52%, 96%);
 }
 
-.background {
+.background-dktp {
+  display: inherit;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.background-mobile {
+  display: none;
   width: 100%;
   position: fixed;
   top: 0;
@@ -18,7 +27,7 @@ body {
 .filter-bar {
   z-index: 2;
   min-height: 4em;
-  margin: 80px auto 0;
+  margin: 180px auto 0;
   width: 80%;
   background-color: white;
   box-shadow: 0px 4px 3px 3px rgba(91, 164, 164, 0.25);
@@ -37,6 +46,7 @@ body {
   font-family: "League Spartan", sans-serif;
   margin: 0 10px;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 .filter-bar .filter-btn p {
   height: 100%;
@@ -61,6 +71,23 @@ body {
 }
 .filter-bar .filter-btn:hover > .cancel-btn {
   background-color: black;
+  cursor: pointer;
+}
+.filter-bar .clear-btn {
+  width: 4em;
+  height: 2.6em;
+  border: none;
+  color: hsl(180, 8%, 52%);
+  background-color: inherit;
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 2em;
+  margin-left: auto;
+}
+.filter-bar .clear-btn:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -245,6 +272,15 @@ body {
   }
   .job-posting .tag-wrapper .tag-btn {
     margin: 5px 5px;
+  }
+  .background-dktp {
+    display: none;
+  }
+  .background-mobile {
+    display: inherit;
+  }
+  .filter-bar {
+    margin: 130px auto 0;
   }
 }
 .show {
