@@ -13,9 +13,10 @@ body {
 .advice-wrapper {
   position: relative;
   background-color: hsl(217, 19%, 24%);
-  min-height: 30%;
+  min-height: 220px;
   max-height: 60%;
   width: 30%;
+  min-width: 500px;
   margin: 15% auto;
   border-radius: 20px;
   display: flex;

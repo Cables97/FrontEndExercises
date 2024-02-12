@@ -26,10 +26,9 @@ domRefreshDice.addEventListener('click', () =>{
 //---------------------------------
 // On Start
 //---------------------------------
-window.onload = () =>{
-    refreshAdvice();
-    setAdvice();
-}
+refreshAdvice();
+setAdvice();
+
 
 //---------------------------------
 // Functions
