@@ -1,0 +1,104 @@
+$light-cyan:hsl(193, 38%, 86%);
+$neon-green:hsl(150, 100%, 66%);
+
+$gray-blue:hsl(217, 19%, 38%);
+$dark-gray-blue:hsl(217, 19%, 24%);
+$dark-blue:hsl(218, 23%, 16%);
+
+$quote-size: 28px;
+
+$font :'Manrope', sans-serif;
+@mixin proxyborder{
+    border:1px solid red;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:100vw;
+    background-color: $dark-blue;
+}
+
+.advice-wrapper{
+    position: relative;
+    background-color: $dark-gray-blue;
+    min-height: 30%;
+    max-height: 60%;
+    width: 30%;
+
+    margin:15% auto;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: $font;
+    
+
+
+    .advice-id{
+        text-align: center;
+        color:$neon-green;
+    }
+    .advice{
+        font-size: $quote-size;
+        text-align: center;
+        color:$light-cyan;
+    }
+    
+    .split{
+        position: absolute;
+        bottom:4em;
+    }
+
+    .dice-wrapper{
+        position: absolute;
+        bottom:-32px;
+        height:64px;
+        width: 64px;
+        border-radius: 50%;
+        background-color: $neon-green;
+        cursor: pointer;
+        img{
+            margin:50% 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .dice-wrapper:hover{
+        box-shadow: 0 0 20px 2px $neon-green ;
+    }
+
+
+}
+
+.desktop{
+    display: inherit;
+}
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .advice-wrapper{
+        
+        min-height: 40%;
+        max-height: 90%;
+        width: 90%;
+    
+        margin:30% auto;
+    }
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display: inherit;
+    }
+}

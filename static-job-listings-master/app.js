@@ -16,11 +16,6 @@ console.log(data);
 //DOM Variables
 //-------------------------------------
 
-let domFltrFrontEnd = document.getElementById('frontend-filter');
-
-let domFltrSenior = document.getElementById('all-filter');
-
-
 //-------------------------------------
 //Global Variables
 //-------------------------------------
@@ -245,6 +240,12 @@ function buildFilterBtn(){
   clearBtn.innerHTML = 'Clear';
   clearBtn.classList.add('clear-btn')
   domFilterBar.append(clearBtn);
+
+  clearBtn.addEventListener('click', ()=>{
+    filterListRemove('all');
+  })
+
+
   }
 }
 
@@ -259,6 +260,12 @@ function filterListAdd(f){
 }
 
 function filterListRemove(f){
+  if(f == 'all'){
+    arrFilterList = [];
+    buildFilterBtn();
+    filterMaster();
+  }
+
   let e = f.toLowerCase();
   console.log('filter item removed: ' + e)
   arrFilterList.splice(arrFilterList.indexOf(e),1);

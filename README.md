@@ -4,7 +4,13 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
-## [Static Job Listing](https://cables97.github.io/FrontEndExercises/static-job-listings-master/index.html)
+## [Advice Generator](https://cables97.github.io/FrontEndExercises/advice-generator-app-main/index.html)
+
+![App Screenshot](https://cables97.github.io/FrontEndExercises/advice-generator-app-main/images/screenshot.jpg)
+Simple advice generator with API fetch.
+
+Built using JavaScript, HTML, SCSS, and API
+
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/static-job-listings-master/images/screenshot.jpg)
 Job Listing page with filtering. 

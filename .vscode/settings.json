@@ -26,6 +26,10 @@
         {
             "folderPath": "FrontEndTutor\\tip-calculator-app-main\\",
             "color": "foldercolorizer.SpringGreen"
+        },
+        {
+            "folderPath": "FrontEndTutor\\advice-generator-app-main\\",
+            "color": "foldercolorizer.LightRed"
         }
     ]
 }
