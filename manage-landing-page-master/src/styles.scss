@@ -78,23 +78,104 @@ header{
     padding: 14px 28px;
 }
 
-.intro-section{
+
+//each section is 1 screen height in height, and 80% wide. 
+
+
+
+
+.intro{
     display:flex;
+    .intro-1{
+            order:1;
+
+            h1{
+                @include font-500;
+                color: $text-blue;
+                font-size: 3em;
+            }
+            
+        }
+        .intro-2{
+            order:2;
+            
+            img{
+                float:right;
+                @include proxyborder;
+            }
+        }
+        
 }
+
+.info{
+.info-1{
+            order:1;
+        }
+        .info-2{
+            order:2;
+            border:3px solid yellow;
+            .info-2-section{
+                @include proxyborder;
+                float: right;
+                width:80%;
+
+
+                
+            }
+        }
+
+}
+
+
+
 .content{
-    width: 80%;
+    width: 100%;
     margin:auto;
+    overflow: hidden;
+
+    .section{
+        width: 80%;
+        margin:auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .half{
+        @include proxyborder;
+        width:50%;
+    }
+}
+
+.review-section{
+    @include proxyborder;
+    margin:auto;
+    overflow:visible;
+    position: relative;
+    height:400px;
+    .reviews-box{
+
+
+        display: flex;
+        flex-direction: row;
+
+        .review{
+            @include proxyborder;
+            width:calc(100% * (3 / 5));
+        }
+
+    }
+
+
 }
 
 
 
-.external-links{
-    
-}
 
 
 footer{
     background-color: $dark-blue;
+    //.external-links{}
+
 }
 
 

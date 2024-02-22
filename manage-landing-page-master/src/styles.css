@@ -43,13 +43,69 @@ header .ham-btn {
   padding: 14px 28px;
 }
 
-.intro-section {
+.intro {
   display: flex;
+}
+.intro .intro-1 {
+  order: 1;
+}
+.intro .intro-1 h1 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 39%, 23%);
+  font-size: 3em;
+}
+.intro .intro-2 {
+  order: 2;
+}
+.intro .intro-2 img {
+  float: right;
+  border: 1px solid red;
+}
+
+.info .info-1 {
+  order: 1;
+}
+.info .info-2 {
+  order: 2;
+  border: 3px solid yellow;
+}
+.info .info-2 .info-2-section {
+  border: 1px solid red;
+  float: right;
+  width: 80%;
 }
 
 .content {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.content .section {
   width: 80%;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.content .half {
+  border: 1px solid red;
+  width: 50%;
+}
+
+.review-section {
+  border: 1px solid red;
+  margin: auto;
+  overflow: visible;
+  position: relative;
+  height: 400px;
+}
+.review-section .reviews-box {
+  display: flex;
+  flex-direction: row;
+}
+.review-section .reviews-box .review {
+  border: 1px solid red;
+  width: 60%;
 }
 
 footer {
