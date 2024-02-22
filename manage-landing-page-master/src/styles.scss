@@ -1,0 +1,107 @@
+$button: hsl(12, 88%, 59%);
+$button-active: hsl(13, 100%, 96%);
+
+$text-blue:hsl(228, 39%, 23%);
+$text-gray: hsl(227, 12%, 61%);
+
+$dark-blue: hsl(233, 12%, 13%);
+$white: hsl(0, 0%, 98%);
+
+$font: "Be Vietnam Pro", sans-serif;
+
+
+
+
+@mixin font-400{
+    font-family: $font;
+    font-weight: 400;
+}
+
+@mixin font-500{
+    font-family: $font;
+    font-weight: 500;
+}
+
+@mixin font-700{
+    font-family:$font;
+    font-weight:700;
+}
+
+@mixin proxyborder{
+    border:1px solid red;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding:0;
+    border:0;
+    width:100%;
+    margin:auto;
+}
+
+header{
+    @include proxyborder;
+    width: 80%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:20px;
+
+    .menu-bar{
+        @include proxyborder;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        a{
+            @include font-700;
+            color:$dark-blue;
+            text-decoration: none;
+            font-size: .8em;
+        }
+    }
+
+    .ham-btn{
+        display: none;
+    }
+}
+
+.orang-btn{
+    border: none;
+    border-radius: 100px;
+    background-color: $button;
+    color:$white;
+    padding: 14px 28px;
+}
+
+.intro-section{
+    display:flex;
+}
+.content{
+    width: 80%;
+    margin:auto;
+}
+
+
+
+.external-links{
+    
+}
+
+
+footer{
+    background-color: $dark-blue;
+}
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+
+    a { color: hsl(228, 45%, 44%); 
+    }
+ }
