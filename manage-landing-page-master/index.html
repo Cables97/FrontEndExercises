@@ -17,10 +17,10 @@
 </head>
 <body>
 
-  <header>
+  <!--Header Nav-->
+  <header class="col-10">
     <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
     
-
     <div class="menu-bar">
       <a href="#pricing">Pricing</a>
       <a href="#product">Product</a>
@@ -29,18 +29,23 @@
       <a href="#community">Community</a>
     </div>
 
-    <img src="./images/icon-hamburger.svg" alt="hamburgMenu" class="ham-btn">
+    <span id="ham-menu"><img src="./images/icon-hamburger.svg" alt="hamburgMenu" class="ham-btn active"></span>
+    
 
-    <button class="orang-btn btn">Get Started</button>
+    <div class="og-btn-cont"><button class="orang-btn btn">Get Started</button></div>
   </header>
 
+  <main>
+  
+  <!--Main Content Container-->
   <div class="content">
-    <div class="intro section">
+    <!--Intro Section 1-->
+    <div class="intro section col-10">
 
       <div class="intro-1 half">
         <h1>Bring everyone together to build better products.</h1>
         <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
-        <button class="orang-btn btn">Get Started</button>
+        <div class="og-btn-cont"><button class="orang-btn btn">Get Started</button></div>
       </div>
 
       <div class="intro-2 half">
@@ -49,137 +54,243 @@
 
     </div>
 
-
-  <div class="info section">
-    <div class="info-1 half">
-      <h2>What's different about Manage?</h2>
-      <p>  Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams. </p>
-    </div>
-    
-    <div class="info-2 half">
-
-      <div class="info-2-section">
-        <div><button class="orang-btn" disabled>01</button></div>
-        <div class="blurb">
-          <h3>Track company-wide progress</h3>
-          <p>See how your day-to-day tasks fit into the wider vision. Go from 
-            tracking progress at the milestone level all the way done to the 
-            smallest of details. Never lose sight of the bigger picture again.</p>
-        </div>
+    <!--Info Section 2-->
+    <div class="info section col-10">
+      <div class="info-1 half">
+        <h2>What's different about Manage?</h2>
+        <p>  Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams. </p>
       </div>
+      
+      <div class="info-2 half">
 
-      <div class="info-2-section">
-        <div><button class="orang-btn" disabled>02</button></div>
-        <div class="blurb">
-          <h3>Advanced built-in reports</h3>
-          <p>Set internal delivery estimates and track progress toward company 
-            goals. Our customisable dashboard helps you build out the reports 
-            you need to keep key stakeholders informed.</p>
+        <div class="info-2-section">
+          <div class="top-line">
+            <div class="og-btn-cont"><button class="orang-btn" disabled>01</button></div>
+            <h3>Track company-wide progress</h3>
         </div>
-      </div>
 
-      <div class="info-2-section">
-        <div><button class="orang-btn" disabled>03</button></div>
-        <div class="blurb">
-          <h3>Everything you need in one place</h3>
-          <p>Stop jumping from one service to another to communicate, store files, 
-            track tasks and share documents. Manage offers an all-in-one team 
-            productivity solution.</p>
+          <div class="blurb">
+            <p>See how your day-to-day tasks fit into the wider vision. Go from 
+              tracking progress at the milestone level all the way done to the 
+              smallest of details. Never lose sight of the bigger picture again.</p>
+          </div>
         </div>
-      </div>
 
+        <div class="info-2-section">
+          <div class="top-line">
+              <div class="og-btn-cont"><button class="orang-btn" disabled>02</button></div>
+              <h3>Advanced built-in reports</h3>
+          </div>
+
+          <div class="blurb">
+            <p>Set internal delivery estimates and track progress toward company 
+              goals. Our customisable dashboard helps you build out the reports 
+              you need to keep key stakeholders informed.</p>
+          </div>
+        </div>
+
+        <div class="info-2-section">
+          <div class="top-line">
+            <div class="og-btn-cont"><button class="orang-btn" disabled>03</button></div>
+            <h3>Everything you need in one place</h3>
+          </div>
+
+          <div class="blurb">
+            <p>Stop jumping from one service to another to communicate, store files, 
+              track tasks and share documents. Manage offers an all-in-one team 
+              productivity solution.</p>
+          </div>
+        </div>
+
+        
+      </div>
       
     </div>
-    
-  </div>
 
-  <div class="review-section">
-    <h2>What they've said</h2>
-    <div class="reviews-box">
+    <!--Reviews Section 3-->
+    <div class="reviews section col-12">
+      <h2>What they’ve said</h2>
 
-      <div class="review">
-        <img src="./images/avatar-anisha.png" alt="">
-        <h4>Anisha Li</h4>
-        <p>“Manage has supercharged our team’s workflow. The ability to maintain 
-          visibility on larger milestones at all times keeps everyone motivated.”</p>
+      <div class="reviews-desktop">
+
+        <div class="review">
+          <img src="./images/avatar-anisha.png" alt="">
+          <h4>Anisha Li</h4>
+          <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+            visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </div>
+
+        <div class="review">
+          <img src="./images/avatar-ali.png" alt="">
+          <h4>Ali Bravo</h4>
+          <p>  “We have been able to cancel so many other subscriptions since using 
+            Manage. There is no more cross-channel confusion and everyone is much 
+            more focused.”</p>
+        </div>
+
+        <div class="review">
+          <img src="./images/avatar-richard.png" alt="">
+          <h4>  Richard Watts</h4>
+          <p>“Manage allows us to provide structure and process. It keeps us organized 
+            and focused. I can’t stop recommending them to everyone I talk to!”</p>
+        </div>
+
+        <!--<div class="review">
+          <img src="./images/avatar-shanai.png" alt="">
+          <h4>Shanai Gough</h4>
+          <p>“Their software allows us to track, manage and collaborate on our projects 
+            from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </div>-->
+
       </div>
 
-      <div class="review">
-        <img src="./images/avatar-ali.png" alt="">
-        <h4>Ali Bravo</h4>
-        <p>  “We have been able to cancel so many other subscriptions since using 
-          Manage. There is no more cross-channel confusion and everyone is much 
-          more focused.”</p>
+      <div class="reviews-mobile">
+
+        <div class="review active" id="review-1">
+          <img src="./images/avatar-anisha.png" alt="">
+          <h4>Anisha Li</h4>
+          <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+            visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </div>
+
+
+        <div class="review inactive" id="review-2">
+          <img src="./images/avatar-ali.png" alt="">
+          <h4>Ali Bravo</h4>
+          <p>  “We have been able to cancel so many other subscriptions since using 
+            Manage. There is no more cross-channel confusion and everyone is much 
+            more focused.”</p>
+        </div>
+
+        <div class="review inactive" id="review-3">
+          <img src="./images/avatar-richard.png" alt="">
+          <h4>  Richard Watts</h4>
+          <p>“Manage allows us to provide structure and process. It keeps us organized 
+            and focused. I can’t stop recommending them to everyone I talk to!”</p>
+        </div>
+
+        <div class="review inactive" id="review-4">
+          <img src="./images/avatar-shanai.png" alt="">
+          <h4>Shanai Gough</h4>
+          <p>“Their software allows us to track, manage and collaborate on our projects 
+            from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </div>
+
+
+
+        <div class="circles" id="circles">
+          <div class="circle-btn circle-active" id="cir-btn-1"></div>
+          <div class="circle-btn" id="cir-btn-2"></div>
+          <div class="circle-btn" id="cir-btn-3"></div>
+          <div class="circle-btn" id="cir-btn-4"></div>
+        </div>
+        
       </div>
 
-      <div class="review">
-        <img src="./images/avatar-richard.png" alt="">
-        <h4>  Richard Watts</h4>
-        <p>“Manage allows us to provide structure and process. It keeps us organized 
-          and focused. I can’t stop recommending them to everyone I talk to!”</p>
-      </div>
 
-      <div class="review">
-        <img src="./images/avatar-shanai.png" alt="">
-        <h4>Shanai Gough</h4>
-        <p>“Their software allows us to track, manage and collaborate on our projects 
-          from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-      </div>
+      
+      <div class="og-btn-cont"><button class="orang-btn btn">Get Started</button></div>
 
     </div>
-    <button class="orang-btn btn">Get Started</button>
+
   </div>
+
+  <span class="mobile-menu inactive" id="mobile-menu">
+
+    <div class="bg-gradient"></div>
+    <img src="./images/icon-close.svg" alt="" id="menu-close" class="menu-close">
+
+    <div class="mobile-menu-list">
+      <ul>
+        <li>Pricing</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Community</li>
+      </ul>
+    </div>
+
+
+    
+  </span>
+
+  <!--Background-->
+  <div class="bg-container">
+    <img src="./images/bg-tablet-pattern.svg" alt="">
+    <img src="./images/bg-tablet-pattern.svg" alt="">
   </div>
  
-
+  
+  <!--Orange bottom banner-->
   <div class="bottom-banner">
-    <h1>Simplify how your team works today.</h1>
-    <div class="white-btn"><p>Get Started</p></div>
+    <div class="banner-wrapper col-10">
+      <h1>Simplify how your team works today.</h1>
+      <div class="og-btn-cont"><button class="whit-btn btn">Get Started</button></div>
+    </div>
+
+
+    <img src="./images/bg-simplify-section-desktop.svg" alt="" class="bn-bg-dt">
+
+    <img src="./images/bg-simplify-section-mobile.svg" alt="" class="bn-bg-mb">
+
   </div>
 
+<!--Footer Bar-->
   <footer>
-    <div class="logo-box">
-      <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
+    <div class="footer-wrapper">
+      <div class="logo-box">
+        <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
 
-      <div class="external-links">
-        <img src="./images/icon-facebook.svg" alt="facebook">
-        <img src="./images/icon-youtube.svg" alt="youtube">
-        <img src="./images/icon-twitter.svg" alt="twitter">
-        <img src="./images/icon-pinterest.svg" alt="pinterest">
-        <img src="./images/icon-instagram.svg" alt="insta">
+        <div class="external-links">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+          <img src="./images/icon-youtube.svg" alt="youtube">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+          <img src="./images/icon-pinterest.svg" alt="pinterest">
+          <img src="./images/icon-instagram.svg" alt="insta">
+        </div>
+
+      </div>
+
+      <div class="link-box">
+        <div class="lb-col">
+          <a href="">Home</a>
+          <a href="">Pricing</a>
+          <a href="">Products</a>
+          <a href="">About Us</a>
+        </div>
+
+        <div class="lb-col">
+          <a href="">Careers</a>
+          <a href="">Community</a>
+          <a href="">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="email-box">
+        <div class="email-wrapper">
+          <input type="email" class="email-bar" id="email-bar" name="email-bar" placeholder="Updates in your inbox..." autocomplete="on" required>
+          <div class="og-btn-cont"><button type="submit" id="submit-btn" class="orang-btn btn">Go</button></div>
+          <p class="invalid-txt inactive" id="invalid-txt">Please inset a valid email</p>
+          <p class="valid-txt inactive" id="valid-txt">Thank you for Subscribing!</p>
+        </div>
+        
+      
       </div>
       
-
     </div>
-
-    <div class="link-box">
-      <div class="lb-col">
-        <button type="button" name="home">Home</button>
-        <button type="button" name="pricing">Pricing</button>
-        <button type="button" name="products">Products</button>
-        <button type="button" name="aboutUs">About Us</button>
-      </div>
-
-      <div class="lb-col">
-        <button type="button" name="careers">Careers</button>
-        <button type="button" name="community">Community</button>
-        <button type="button" name="privacyPolicy">Privacy Policy</button>
-      </div>
-    </div>
-
-    <div class="email-bar">
-      <input type="email" id="email-bar" name="email-bar" placeholder="Updates in your inbox..." autocomplete="on" required>
-      <input type="submit" value="Go">
-    </div>
-
-
-    Copyright 2020. All Rights Reserved
+    <p class="copyright">Copyright 2020. All Rights Reserved</p>
+    
   </footer>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a>. Coded by<a href="https://cables97.github.io/">Caleb -Cables- Universe 2024</a>.
   </div>
+
+
+</main>
+
 
   <script type="module" src="./src/app.js"></script>
 </body>
