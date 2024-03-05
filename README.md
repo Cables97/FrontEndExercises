@@ -4,6 +4,16 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
+
+## [Landing Page](https://cables97.github.io/FrontEndExercises/manage-landing-page-master/index.html)
+
+![App Screenshot](https://cables97.github.io/FrontEndExercises/manage-landing-page-master/images/screenshot.jpg)
+Site Landing page with RegEx Email verification
+
+Built using JavaScript, HTML, SCSS
+
+
+
 ## [Advice Generator](https://cables97.github.io/FrontEndExercises/advice-generator-app-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/advice-generator-app-main/images/screenshot.jpg)
@@ -11,6 +21,9 @@ Simple advice generator with API fetch.
 
 Built using JavaScript, HTML, SCSS, and API
 
+
+
+## [Static Job Posting Page](https://cables97.github.io/FrontEndExercises/static-job-listings-master/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/static-job-listings-master/images/screenshot.jpg)
 Job Listing page with filtering. 
