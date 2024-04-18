@@ -7,7 +7,7 @@ body {
   border: 0;
   width: 100%;
   margin: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .inactive {
@@ -238,6 +238,7 @@ header .ham-btn:hover {
   font-size: 1.2em;
 }
 .info .info-2 .info-2-section .top-line h3 {
+  width: auto;
   text-align: left;
   padding-left: 1em;
   font-family: "Be Vietnam Pro", sans-serif;
@@ -736,9 +737,9 @@ footer .footer-wrapper .email-box .email-wrapper .active {
   .info .info-2 .info-2-section .top-line h3 {
     margin-left: -30px;
     padding-left: 2.5em;
-    width: 500px;
+    width: 1200px;
     color: hsl(228, 39%, 23%);
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 230%;
     background-color: hsl(13, 100%, 96%);
   }

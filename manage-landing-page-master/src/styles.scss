@@ -42,7 +42,7 @@ body{
     border:0;
     width:100%;
     margin:auto;
-    overflow-x: hidden
+    overflow: hidden
     
 }
 
@@ -306,7 +306,7 @@ header{
                     }
                 }
                 h3{
-                    
+                    width:auto;
                     text-align: left;
                     padding-left: 1em;
                     @include font-700;
@@ -828,9 +828,9 @@ header{
                 h3{
                     margin-left: -30px;
                     padding-left: 2.5em;
-                    width:500px;
+                    width:1200px;
                     color: $text-blue;
-                    font-size: 1em;
+                    font-size: .9em;
                     line-height: 230%;
                     background-color: $button-active;
                 }

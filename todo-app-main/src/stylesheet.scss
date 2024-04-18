@@ -1,0 +1,42 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+:root{
+    --font-fam:"Josefin Sans", sans-serif;
+    --font-thin : 400;
+    --font-thick: 700;
+
+    --text-active: hsl(220, 98%, 61%);
+    --text-dark:hsl(234, 11%, 52%);
+    --bg-check: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    --background: hsl(235, 21%, 11%);
+    --bg-focus: hsl(235, 24%, 19%);
+    --text: hsl(234, 39%, 85%);
+    --text-hover:hsl(236, 33%, 92%);
+    --bg-img-desk:url(../images/bg-desktop-light.jpg);
+    --bg-img-mobile: url(../images/bg-mobile-light.jpg);
+}
+
+.darkmode{
+    --background: hsl(235, 21%, 11%);
+    --bg-focus: hsl(235, 24%, 19%);
+    --text: hsl(234, 39%, 85%);
+    --text-hover:hsl(236, 33%, 92%);
+    --bg-img-desk:url(../images/bg-desktop-dark.jpg);
+    --bg-img-mobile: url(../images/bg-mobile-dark.jpg);
+}
+
+div{
+    height:300px;
+    width:300px;
+    background-color:hsl(235, 24%, 19%) ;
+}
