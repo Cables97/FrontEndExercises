@@ -30,6 +30,10 @@
         {
             "folderPath": "FrontEndTutor\\advice-generator-app-main\\",
             "color": "foldercolorizer.LightRed"
+        },
+        {
+            "folderPath": "FrontEndTutor\\todo-app-main\\",
+            "color": "foldercolorizer.GreenYellow"
         }
     ]
 }
