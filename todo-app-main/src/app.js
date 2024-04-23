@@ -36,17 +36,23 @@ domInputBox.addEventListener("keydown", evt => {
 function inputParse(){
     let toInput = domInputBox.value;
     if(toInput.length > 0){
-        buildListItem(toInput);
+        addStringToArray(false, toInput);
         domInputBox.value = "";
     }
-    
 }
+
+let localFix = ''
+let arrayToDoList = [];
+loadLocal();
+
+
+
 
 //--------------------------------------------------
 // List Item Build
 //--------------------------------------------------
 
-function buildListItem(strToDO){
+function buildListItem(boolCheck, strToDO){
     const domList = document.getElementById("list")
 
     let liListItem = document.createElement("li");
@@ -59,7 +65,16 @@ function buildListItem(strToDO){
 
             let inputCheckbox = document.createElement("input");
             inputCheckbox.type = "checkbox";
-            inputCheckbox.checked = false ;
+            inputCheckbox.classList.add("checkbox")
+
+            if(boolCheck){
+                inputCheckbox.checked = true ;
+                liListItem.classList.add("completed")
+            }else{
+                inputCheckbox.checked = false ;
+                liListItem.classList.remove("completed")
+            }
+
             labelCheck.append(inputCheckbox);
 
             let spanCheck = document.createElement("span");
@@ -67,12 +82,7 @@ function buildListItem(strToDO){
             labelCheck.append(spanCheck);
 
             spanCheck.addEventListener("click",()=>{
-                if(inputCheckbox.checked){
-                    liListItem.classList.remove("completed")
-                } else{
-                    liListItem.classList.add("completed")
-                }
-                remainingCheck();
+                checkItem(liListItem);
             });
 
                 let imgCheck = document.createElement("img");
@@ -89,8 +99,7 @@ function buildListItem(strToDO){
         liListItem.append(divDelete);
 
         divDelete.addEventListener("click",()=>{
-            liListItem.remove();
-            remainingCheck();
+            removeItem(liListItem);
         });
 
             let imgDelete = document.createElement("img");
@@ -146,7 +155,6 @@ domCompletedToggle.forEach(e => {
 
 function toggleList(strToggle){
     let allItems = domList.querySelectorAll(".list-item");
-    let completeItems = domList.querySelectorAll(".completed");
 
     allItems.forEach(element => {
             element.style.display = "flex"           
@@ -211,14 +219,6 @@ function clearCompleted(){
 // Start
 //--------------------------------------------------
 
-buildListItem("Complete online JavaScript course");
-buildListItem("Jog around the park 5x");
-buildListItem("10 minutes meditation");
-buildListItem("Read for 1 hour");
-buildListItem("Pick up groceries");
-buildListItem("Complete Todo App on Frontend Mentor");
-
-
 //--------------------------------------------------
 // Dark mode
 //--------------------------------------------------
@@ -231,15 +231,102 @@ function darkMode(){
     if(document.body.classList.contains("darkmode")){
         document.body.classList.remove("darkmode");
         toggle.querySelectorAll("img")[0].src = "./images/icon-moon.svg"
-
     } else{
         document.body.classList.add("darkmode");
         toggle.querySelectorAll("img")[0].src = "./images/icon-sun.svg"
+    }
+}
 
 
+//--------------------------------------------------
+// Adding to Array/List
+//--------------------------------------------------
+function addStringToArray(bool, str){
+    console.log(str);
+    let toDo = [bool, str];
+    console.log(toDo);
+    arrayToDoList.push(toDo);
+    buildListItem(toDo[0], toDo[1]);
+    saveLocal();
+    console.log(arrayToDoList);
+}
+
+
+//--------------------------------------------------
+// Remove from Array/List
+//--------------------------------------------------
+
+function removeItem(el){
+    removeStringFromArray(el.querySelectorAll('p')[0].innerHTML);
+    el.remove();
+    remainingCheck();
+    console.log("removing element")
+    saveLocal();
+}
+
+function removeStringFromArray(str) {
+    for (let i = 0; i < arrayToDoList.length; i++) {
+        if (arrayToDoList[i][1] === str) {
+            arrayToDoList.splice(i, 1);
+        }
+    }
+}
+
+//--------------------------------------------------
+// Checkbox
+//--------------------------------------------------
+
+function checkItem(el){
+    let boolValue = false;
+    let targetString = el.querySelectorAll('p')[0].innerHTML;
+    let inputCheckbox = el.getElementsByClassName("checkbox")[0];
+
+    if(!inputCheckbox.checked){
+        el.classList.add("completed")
+        boolValue = true;
+    } else{
+        el.classList.remove("completed")
+        boolValue = false;
     }
 
+    for (let i = 0; i < arrayToDoList.length; i++) {
+        if (arrayToDoList[i][1] === targetString) {
+            arrayToDoList[i][0] = boolValue;
+        }
+    }
+    saveLocal();
+    remainingCheck();
+}
 
 
-    
+//--------------------------------------------------
+// local Storage
+//--------------------------------------------------
+
+document.getElementById("clear").addEventListener('click', ()=>{
+    let clear = [];
+    console.log(arrayToDoList);
+    localStorage["to-do-list"] = JSON.stringify(clear)
+    loadLocal();
+    window.location.reload();
+})
+
+
+function saveLocal(){
+    localStorage["to-do-list"] = JSON.stringify(arrayToDoList)
+    console.log("saving" + arrayToDoList);
+}
+
+function loadLocal(){
+    let arrayToDoList = [];
+    let local = JSON.parse(localStorage["to-do-list"])
+    console.log("local" + local);
+
+
+    arrayToDoList = local;
+    console.log(arrayToDoList);
+
+    arrayToDoList.forEach(element => {
+        addStringToArray(element[0], element[1])
+    });
 }
