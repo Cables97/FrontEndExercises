@@ -5,13 +5,12 @@
     --h-font: "Bellefair", serif;
     --tc-font: "Barlow Condensed", sans-serif;
     --t-font: "Barlow", sans-serif;
-    --bg:url(./assets/home/background-home-desktop.jpg);
     --color-font: #fff;
     --color-font-b: #D0D6F9;
     --color-dark: #0B0D17;
 
-    --tech-img: url(./assets/technology/image-launch-vehicle-portrait.jpg);
-    --tech-img-m:url(./assets/technology/image-launch-vehicle-landscape.jpg);
+    --tech-img: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+    --tech-img-m:url(../assets/technology/image-launch-vehicle-landscape.jpg);
 }
 
 @mixin border{
@@ -52,11 +51,9 @@
     }
 }
 
-
 *{
     box-sizing: border-box;
 }
-
 
 body{
 
@@ -121,6 +118,61 @@ body{
         padding-right:40px;
         display:none;
     }
+
+    .mobile-nav{
+        display: none;
+        position: fixed;
+        top:0;
+        right:0;
+        height:1000px;
+        width:70vw;
+        z-index: 99;
+        padding:0;
+        .mobile-menu-x{
+            position: absolute;
+            right:40px;
+            top:40px;
+        }
+        .mobile-menu-x:hover{
+            cursor: pointer;
+        }
+        .m-nav{
+            margin-top:50%;
+            margin-right:10px;
+            height:20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            li{
+                position: relative;
+                display: inline-block;
+                margin: 100px 0;
+                margin: 0;
+                a{
+                    display: block;
+                    margin:0;
+                    padding:5px;
+                    text-decoration: none;
+                    color:white;
+                }
+                .bold{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .m-menu-bg{
+            z-index: -1;
+            position: absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            backdrop-filter: blur(30px);
+            background-color: rgba($color: #1c1c1c, $alpha: 0.08);
+            list-style-type: none;
+        }
+    }
 }
 
 .bg{
@@ -134,17 +186,21 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
 .bg1{
-    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
 }
+
 .bg2{
-    background-image: url(./assets/destination/background-destination-desktop.jpg);
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
 }
+
 .bg3{
-    background-image: url(./assets/crew/background-crew-desktop.jpg);
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
 }
+
 .bg4{
-    background-image: url(./assets/technology/background-technology-desktop.jpg);
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
 }
 
 .content{
@@ -200,6 +256,7 @@ body{
 .is-visible .section__img {
     opacity: 0.75;
 }
+
 
 //-----------------------
 // Section selectors
@@ -319,12 +376,16 @@ body{
                 height:34px;
                 padding:0;
                 margin:0;
+                .dest-btn{
+                    position: relative;
+                }
                 li{ 
-                    display: inline-block;
                     padding:0;                    
                     margin:0;
                     list-style: none;
-
+                }
+                li:hover{
+                    cursor: pointer;
                 }
             }
 
@@ -362,6 +423,7 @@ body{
             h3{
                 padding:0;
                 margin:.5em 0;
+
             }
             h4{
                 padding:0;
@@ -432,6 +494,9 @@ body{
                     filter: invert(100%);
                 }
             }
+            .tech-active{
+                filter: invert(100%);
+            }
         }
         .tech-info{
             width:490px;
@@ -452,10 +517,9 @@ body{
         .tech-img{
             position: absolute;
             bottom: 0;
-            //right:-165px;
-
         }
 }
+
 
 //-----------------------
 // Text selectors
@@ -471,6 +535,7 @@ h2{
 
 h3{ 
     color: var(--color-font);
+    text-transform: uppercase;
 }
 
 h4{ 
@@ -502,11 +567,11 @@ p.sub-head{ //avg distance
     font-size: 18px; 
     letter-spacing: 2.7px;
     color: var(--color-font-b);
-    @include underline-hover;
 }
 
 .nav-active{
     color: var(--color-font);
+    position: relative;
     @include underline;
 }
 
@@ -646,7 +711,6 @@ hr{
                 
             }
             .crew-info{
-                
                 height:212px;
                 width:327px;
                 margin:0;
@@ -804,17 +868,26 @@ hr{
         font-weight: 200;
     
     }
+
+    .nav-text{ //nav
+        font-family: var(--tc-font);
+        font-size: 18px; 
+        letter-spacing: 2.7px;
+        color: var(--color-font-b);
+    }
+
+
     .bg1{
-        background-image: url(./assets/home/background-home-mobile.jpg);
+        background-image: url(../assets/home/background-home-mobile.jpg);
     }
     .bg2{
-        background-image: url(./assets/destination/background-destination-mobile.jpg);
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
     }
     .bg3{
-        background-image: url(./assets/crew/background-crew-mobile.jpg);
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
     }
     .bg4{
-        background-image: url(./assets/technology/background-technology-mobile.jpg);
+        background-image: url(../assets/technology/background-technology-mobile.jpg);
     }
     
 }
@@ -902,9 +975,7 @@ hr{
                 align-items: center;
                 width: 80%;
                 height:auto;
-                
                 padding-bottom:0;
-
                 .planet-btns{
                     position: relative;
                 }
@@ -1056,6 +1127,7 @@ hr{
     h3{ 
         font-family: var(--h-font);
         font-size: 40px; 
+
     }
 
     h4{ 
@@ -1083,23 +1155,22 @@ hr{
     }
 
     .bg1{
-        background-image: url(./assets/home/background-home-tablet.jpg);
+        background-image: url(../assets/home/background-home-tablet.jpg);
     }
     .bg2{
-        background-image: url(./assets/destination/background-destination-tablet.jpg);
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
     }
     .bg3{
-        background-image: url(./assets/crew/background-crew-tablet.jpg);
+        background-image: url(../assets/crew/background-crew-tablet.jpg);
     }
     .bg4{
-        background-image: url(./assets/technology/background-technology-tablet.jpg);
+        background-image: url(../assets/technology/background-technology-tablet.jpg);
     }
     .nav-text{ //nav
         font-family: var(--tc-font);
         font-size: 14px; 
         letter-spacing: 2.7px;
         color: var(--color-font-b);
-        @include underline-hover;
     }
     
 }
@@ -1124,6 +1195,11 @@ hr{
     .crew{
         bottom:10%;
         .crew-wrapper{
+            .crew-info{
+                h3{
+                    width: 640px;
+                }
+            }
             .crew-member{
                 margin-left:8em;
                 margin-top:-4em;
@@ -1182,13 +1258,20 @@ hr{
         line-height: 100%;
     }
 
+    .nav-text{ //nav
+        @include underline-hover;
+    }
+
+    .nav-active{
+        color: var(--color-font);
+        position: relative;
+        @include underline;
+    }
 
 }
 
 @media only screen and (min-width: 1440px){
 
-    .body{
-        padding: 0 (calc(((100vh - 1440px ) / 2 ) * -1));
-    }   
+
 
 }

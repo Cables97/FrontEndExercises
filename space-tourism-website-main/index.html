@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Tourism Mockup</title>
-
-
     <link rel="stylesheet" href="./src/stylesheet.css">
-    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
 </head>
 <body>
-    
+ 
+
 
     <div class="nav-wrapper">
-        <img src="./src/assets/shared/logo.svg" alt="">
+        <img src="./assets/shared/logo.svg" alt="">
         <div class="line"></div>
         <ul id="menu" class="nav">
 
@@ -34,7 +32,30 @@
             </li>
             
         </ul>
-        <div class="menu-hamburg"><img src="./src/assets/shared/icon-hamburger.svg" alt=""></div>
+        <div class="menu-hamburg" id="menu-ham"><img src="./assets/shared/icon-hamburger.svg" alt=""></div>
+
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-menu-x" id="menu-x"><img src="./assets/shared/icon-close.svg" alt=""></div>
+            <ul id="m-menu" class="m-nav">
+
+                <li class="" data-menuanchor="home">
+                    <a href="#home" class="nav-text"><span class="bold">00</span> HOME</a>
+                </li>
+    
+                <li class="" data-menuanchor="destination">
+                    <a href="#destination" class="nav-text"><span class="bold">01</span> DESTINATION</a>
+                </li>
+    
+                <li class="" data-menuanchor="crew">
+                    <a href="#crew" class="nav-text"><span class="bold">02</span> CREW</a>
+                </li>
+    
+                <li class="" data-menuanchor="technology">
+                    <a href="#technology" class="nav-text"><span class="bold">03</span> TECHNOLOGY</a>
+                </li>
+            </ul>
+            <div class="m-menu-bg"></div>
+        </div>
     </div>
 
     <div class="main">
@@ -64,10 +85,10 @@
                     <h5><span class="focus">01</span>PICK YOUR DESTINATION</h5>
 
                     <div class="planet-pick-wrapper">
-                        <img src="./src/assets/destination/image-moon.webp" alt="" id="dest-img">
+                        <img src="./assets/destination/image-moon.webp" alt="" id="dest-img">
 
                         <div id="planet-info" class="planet-info">
-                            <ul class="planet-btns">
+                            <ul class="planet-btns" id="dest-btns">
                                 <li class="dest-btn nav-text nav-active">MOON</li>
                                 <li class="dest-btn nav-text">MARS</li>
                                 <li class="dest-btn nav-text">EUROPA</li>
@@ -88,11 +109,11 @@
 
                                 <div>
                                     <p class="sub-head">AVG. DISTANCE</p>
-                                    <h6>384,400 KM</h6>
+                                    <h6 id="dest-distance">384,400 KM</h6>
                                 </div>
                                 <div>
                                     <p class="sub-head">EST. TRAVEL TIME</p>
-                                    <h6>3 DAYS</h6>
+                                    <h6 id="dest-traveltime">3 DAYS</h6>
                                 </div>
 
                             </div>
@@ -121,10 +142,10 @@
                         </p>
                     </div>
 
-                    <div class="crew-member"><img id="crew-img" src="./src/assets/crew/image-douglas-hurley.webp" alt="Commander Douglas Hurley 'whooping'"></div>
+                    <div class="crew-member"><img id="crew-img" src="./assets/crew/image-douglas-hurley.webp" alt="Commander Douglas Hurley 'whooping'"></div>
                 </div>
 
-                <div class="crew-bubbles">
+                <div class="crew-bubbles" id="crew-bubbles">
                     <div class="bubble active"></div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
@@ -142,8 +163,8 @@
                 <h5><span class="focus">03</span>SPACE LAUNCH 101</h5>
 
                 <div class="tech-wrapper">
-                    <div class="tech-btns">
-                        <div class="tech-btn"><h4>1</h4></div>
+                    <div class="tech-btns" id="tech-btns">
+                        <div class="tech-btn tech-active"><h4>1</h4></div>
                         <div class="tech-btn"><h4>2</h4></div>
                         <div class="tech-btn"><h4>3</h4></div>
                     </div>
@@ -164,12 +185,7 @@
 
     </div>
 
-
-    <script type="module" src="./src/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.extensions.min.js" integrity="sha512-fOlK0nmiY4Q7hrlnFMgmEiXBzCaDtIWFLCjPNwb5YN0PqcpburbfkSJ2UL+rcfdslRbNlDeml6t1Se9WLmRKjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-
-
+   <script type="module" src="./src/app.js"></script>
 
 </body>
 </html>

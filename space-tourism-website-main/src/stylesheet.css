@@ -3,12 +3,11 @@
   --h-font: "Bellefair", serif;
   --tc-font: "Barlow Condensed", sans-serif;
   --t-font: "Barlow", sans-serif;
-  --bg:url(./assets/home/background-home-desktop.jpg);
   --color-font: #fff;
   --color-font-b: #D0D6F9;
   --color-dark: #0B0D17;
-  --tech-img: url(./assets/technology/image-launch-vehicle-portrait.jpg);
-  --tech-img-m:url(./assets/technology/image-launch-vehicle-landscape.jpg);
+  --tech-img: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+  --tech-img-m:url(../assets/technology/image-launch-vehicle-landscape.jpg);
 }
 
 * {
@@ -73,6 +72,60 @@ body {
   padding-right: 40px;
   display: none;
 }
+.nav-wrapper .mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 1000px;
+  width: 70vw;
+  z-index: 99;
+  padding: 0;
+}
+.nav-wrapper .mobile-nav .mobile-menu-x {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+.nav-wrapper .mobile-nav .mobile-menu-x:hover {
+  cursor: pointer;
+}
+.nav-wrapper .mobile-nav .m-nav {
+  margin-top: 50%;
+  margin-right: 10px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-wrapper .mobile-nav .m-nav li {
+  position: relative;
+  display: inline-block;
+  margin: 100px 0;
+  margin: 0;
+}
+.nav-wrapper .mobile-nav .m-nav li a {
+  display: block;
+  margin: 0;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+.nav-wrapper .mobile-nav .m-nav li .bold {
+  font-weight: 600;
+}
+.nav-wrapper .mobile-nav .m-menu-bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background-color: rgba(28, 28, 28, 0.08);
+  list-style-type: none;
+}
 
 .bg {
   position: absolute;
@@ -87,19 +140,19 @@ body {
 }
 
 .bg1 {
-  background-image: url(./assets/home/background-home-desktop.jpg);
+  background-image: url(../assets/home/background-home-desktop.jpg);
 }
 
 .bg2 {
-  background-image: url(./assets/destination/background-destination-desktop.jpg);
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
 }
 
 .bg3 {
-  background-image: url(./assets/crew/background-crew-desktop.jpg);
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
 }
 
 .bg4 {
-  background-image: url(./assets/technology/background-technology-desktop.jpg);
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
 }
 
 .content {
@@ -257,11 +310,16 @@ body {
   padding: 0;
   margin: 0;
 }
+.destination .planet-pick-wrapper .planet-info .planet-btns .dest-btn {
+  position: relative;
+}
 .destination .planet-pick-wrapper .planet-info .planet-btns li {
-  display: inline-block;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+.destination .planet-pick-wrapper .planet-info .planet-btns li:hover {
+  cursor: pointer;
 }
 .destination .planet-pick-wrapper .planet-info h2 {
   padding: 0;
@@ -354,6 +412,9 @@ body {
 .tech .tech-wrapper .tech-btns .tech-btn:hover {
   filter: invert(100%);
 }
+.tech .tech-wrapper .tech-btns .tech-active {
+  filter: invert(100%);
+}
 .tech .tech-wrapper .tech-info {
   width: 490px;
 }
@@ -384,6 +445,7 @@ h2 {
 
 h3 {
   color: var(--color-font);
+  text-transform: uppercase;
 }
 
 h4 {
@@ -415,25 +477,11 @@ p.sub-head {
   font-size: 18px;
   letter-spacing: 2.7px;
   color: var(--color-font-b);
-  position: relative;
-}
-.nav-text::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 2px;
-  background-color: var(--color-font-b);
-  transition: 0.25s;
-}
-.nav-text:hover::after {
-  width: 100%;
 }
 
 .nav-active {
   color: var(--color-font);
+  position: relative;
 }
 .nav-active::after {
   content: "";
@@ -703,17 +751,23 @@ hr {
     line-height: 25px;
     font-weight: 200;
   }
+  .nav-text {
+    font-family: var(--tc-font);
+    font-size: 18px;
+    letter-spacing: 2.7px;
+    color: var(--color-font-b);
+  }
   .bg1 {
-    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-image: url(../assets/home/background-home-mobile.jpg);
   }
   .bg2 {
-    background-image: url(./assets/destination/background-destination-mobile.jpg);
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
   }
   .bg3 {
-    background-image: url(./assets/crew/background-crew-mobile.jpg);
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
   }
   .bg4 {
-    background-image: url(./assets/technology/background-technology-mobile.jpg);
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
   }
 }
 /* Tablet */
@@ -930,37 +984,22 @@ hr {
     font-weight: 200;
   }
   .bg1 {
-    background-image: url(./assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
   .bg2 {
-    background-image: url(./assets/destination/background-destination-tablet.jpg);
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
   }
   .bg3 {
-    background-image: url(./assets/crew/background-crew-tablet.jpg);
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
   }
   .bg4 {
-    background-image: url(./assets/technology/background-technology-tablet.jpg);
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
   }
   .nav-text {
     font-family: var(--tc-font);
     font-size: 14px;
     letter-spacing: 2.7px;
     color: var(--color-font-b);
-    position: relative;
-  }
-  .nav-text::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 2px;
-    background-color: var(--color-font-b);
-    transition: 0.25s;
-  }
-  .nav-text:hover::after {
-    width: 100%;
   }
 }
 /* Desktop */
@@ -977,6 +1016,9 @@ hr {
   }
   .crew {
     bottom: 10%;
+  }
+  .crew .crew-wrapper .crew-info h3 {
+    width: 640px;
   }
   .crew .crew-wrapper .crew-member {
     margin-left: 8em;
@@ -1025,9 +1067,37 @@ hr {
     font-weight: 300;
     line-height: 100%;
   }
-}
-@media only screen and (min-width: 1440px) {
-  .body {
-    padding: 0 calc((100vh - 1440px) / 2 * -1);
+  .nav-text {
+    position: relative;
+  }
+  .nav-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-font-b);
+    transition: 0.25s;
+  }
+  .nav-text:hover::after {
+    width: 100%;
+  }
+  .nav-active {
+    color: var(--color-font);
+    position: relative;
+  }
+  .nav-active::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-font);
+    transition: 0.25s;
+    width: 100%;
   }
 }/*# sourceMappingURL=stylesheet.css.map */
