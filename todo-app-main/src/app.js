@@ -33,15 +33,32 @@ domInputBox.addEventListener("keydown", evt => {
     }
   });
 
+
+document.getElementById('input-check').addEventListener("click", () => { 
+    if(document.getElementById('input-check').checked){
+        console.log('check')
+    } else{
+        console.log('uncheck')
+    }
+})
+
+
+
+  
+
 function inputParse(){
     let toInput = domInputBox.value;
+    let inputBool = false;
     if(toInput.length > 0){
-        addStringToArray(false, toInput);
+        if(document.getElementById('input-check').checked){
+            inputBool = true;
+        }
+        addStringToArray(inputBool, toInput);
         domInputBox.value = "";
     }
 }
 
-let localFix = ''
+let localFix = '';
 let arrayToDoList = [];
 loadLocal();
 
@@ -318,10 +335,13 @@ function saveLocal(){
 }
 
 function loadLocal(){
+    let local;
     let arrayToDoList = [];
-    let local = JSON.parse(localStorage["to-do-list"])
+    if(localStorage["to-do-list"]){
+        local = JSON.parse(localStorage["to-do-list"])
+    }
+    
     console.log("local" + local);
-
 
     arrayToDoList = local;
     console.log(arrayToDoList);
