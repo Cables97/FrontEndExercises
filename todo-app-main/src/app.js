@@ -182,6 +182,7 @@ function toggleList(strToggle){
             domCompletedToggle[1].classList.remove("on")
             domActiveToggle[0].classList.remove("on")
             domActiveToggle[1].classList.remove("on")
+
     switch(strToggle){
         case "active": //shows all elements, hides the completed
             domActiveToggle[0].classList.add("on")
@@ -214,7 +215,7 @@ function toggleList(strToggle){
         break;
     }
 
-    console.log("Filter by" + strToggle);
+    console.log("Filter by " + strToggle);
 }
 
 
@@ -227,10 +228,15 @@ document.getElementById("clear-completed").addEventListener("click", clearComple
 
 function clearCompleted(){
     let completeList = document.querySelectorAll(".completed");
-    console.log("completed: " + completeList);
+    
     completeList.forEach(e => {
+        console.log("completed: " + completeList);
         e.remove();
+        removeItem(e)
     })
+    saveLocal();
+    console.log(arrayToDoList)
+    toggleList("all")
 }
 
 //--------------------------------------------------
@@ -331,8 +337,9 @@ document.getElementById("clear").addEventListener('click', ()=>{
 
 
 function saveLocal(){
+    localStorage["to-do-list"] = 
     localStorage["to-do-list"] = JSON.stringify(arrayToDoList)
-    console.log("saving" + arrayToDoList);
+    console.log("saving: " + arrayToDoList);
 }
 
 function loadLocal(){
