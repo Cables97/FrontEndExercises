@@ -226,7 +226,8 @@ function toggleList(strToggle){
 document.getElementById("clear-completed").addEventListener("click", clearCompleted);
 
 function clearCompleted(){
-    const completeList = document.querySelectorAll(".completed");
+    let completeList = document.querySelectorAll(".completed");
+    console.log("completed: " + completeList);
     completeList.forEach(e => {
         e.remove();
     })
