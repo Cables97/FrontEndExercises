@@ -4,6 +4,16 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
+## [3D Product Configurator](https://github.com/Cables97/product-configurator)
+
+![App Screenshot](https://raw.githubusercontent.com/Cables97/product-configurator/main/public/images/progress_09122024.gif)
+
+Web Based 3D Product Configurator with add-to-cart function
+
+Built using VueJs, TresJs, JavaScript, HTML, SCSS
+
+[Click Here to Test](https://3dconfig.unvrs.ca/)
+
 ## [Space Tourism Site](https://cables97.github.io/FrontEndExercises/space-tourism-website-main/index.html)
 
 ![App Screenshot](https://cables97.github.io/FrontEndExercises/space-tourism-website-main/screenshot.jpg)
