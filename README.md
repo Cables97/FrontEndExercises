@@ -7,7 +7,7 @@ These small projects are a showcase of ability using real world examples.
 
 ## [Star Rating Component]([https://github.com/Cables97/product-configurator](https://codepen.io/Caleb-Oliver/pen/VwoEgbR?editors=1111))
 
-![App Screenshot]([https://raw.githubusercontent.com/Cables97/product-configurator/main/public/images/progress_09122024.gif](https://raw.githubusercontent.com/Cables97/FrontEndExercises/refs/heads/main/starRatingComponent.gif))
+![App Screenshot](https://raw.githubusercontent.com/Cables97/FrontEndExercises/refs/heads/main/starRatingComponent.gif)
 
 Simple star rating component made with vanilla JS
 
