@@ -4,6 +4,16 @@ A collection of FrontEnd examples and exercises.
 
 These small projects are a showcase of ability using real world examples.
 
+
+## [Star Rating Component]([https://github.com/Cables97/product-configurator](https://codepen.io/Caleb-Oliver/pen/VwoEgbR?editors=1111))
+
+![App Screenshot]([https://raw.githubusercontent.com/Cables97/product-configurator/main/public/images/progress_09122024.gif](https://raw.githubusercontent.com/Cables97/FrontEndExercises/refs/heads/main/starRatingComponent.gif))
+
+Simple star rating component made with vanilla JS
+
+[Click Here to Test]([https://3dconfig.unvrs.ca/](https://codepen.io/Caleb-Oliver/pen/VwoEgbR?editors=1111))
+
+
 ## [3D Product Configurator](https://github.com/Cables97/product-configurator)
 
 ![App Screenshot](https://raw.githubusercontent.com/Cables97/product-configurator/main/public/images/progress_09122024.gif)
@@ -13,6 +23,7 @@ Web Based 3D Product Configurator with add-to-cart function
 Built using VueJs, TresJs, JavaScript, HTML, SCSS
 
 [Click Here to Test](https://3dconfig.unvrs.ca/)
+
 
 ## [Space Tourism Site](https://cables97.github.io/FrontEndExercises/space-tourism-website-main/index.html)
 
